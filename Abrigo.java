@@ -11,10 +11,11 @@ public class Abrigo {
     public Abrigo(String nomeAbrigo, String localizacao) {
         this.nomeAbrigo = nomeAbrigo;
         this.localizacao = localizacao; 
+        this.animaisDisponiveis = new ArrayList<>();
     }
 
     // Métodos para adicionar animal disponível para adoção 
-    public void adcionarAnimal(Animal animal) {
+    public void adicionarAnimal(Animal animal) {
         animaisDisponiveis.add(animal);
     }
 
