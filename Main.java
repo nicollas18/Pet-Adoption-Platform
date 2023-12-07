@@ -1,6 +1,11 @@
+import java.util.List;
+
 public class Main {
+
     public static void main(String[] args) {
-        
+
+        /*
+
         // Criando um animal
         Animal animal = new Animal("Bolinha", 2, "Vira-lata", "Brincalhão");
         
@@ -21,5 +26,19 @@ public class Main {
         } else {
             System.out.println("Desculpe, a adocao nao foi aprovada.");
         }
+
+        // Realizando uma busca por raça
+        List<Animal> animaisPorRaca = abrigo.buscarAnimaisPorCriterio("raça", "Vira-lata");
+        // Isso retornará uma lista de animais com raça "Vira-lata", se houver no abrigo
+
+
+        */ 
+        
+        
+
+        
+
+
+
     }
 }

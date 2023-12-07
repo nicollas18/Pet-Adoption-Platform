@@ -3,6 +3,8 @@ public class Usuario {
     private String email;
     private String senha;
 
+    /*------------------- BASICO ------------------------*/
+
     // Construtor
     public Usuario(String nome, String email, String senha) {
         this.nome  = nome;
@@ -35,4 +37,8 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    /*---------------------------------------------------*/
+
+    
 }

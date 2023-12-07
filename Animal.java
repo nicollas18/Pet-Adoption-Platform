@@ -4,6 +4,9 @@ public class Animal {
     private String raca;
     private String personalidade;
 
+
+    /*------ 1:GERENCIAMENTO DE PERFIS DE ANIMAIS DE ESTIMAÇÃO---------*/
+
     // Construtor
     public Animal(String nome, int idade, String raca, String personalidade) {
         this.nome = nome;
@@ -45,4 +48,6 @@ public class Animal {
     public void setPersonalidade(String personalidade) {
         this.personalidade = personalidade;
     }
+
+    /*---------------------------------------------------*/
 }
