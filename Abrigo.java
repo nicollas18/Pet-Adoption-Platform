@@ -41,7 +41,16 @@ public class Abrigo {
 
     /* ----- 2:PROCESSAMENTO DE PEDIDOS DE ADOÇÃO ------ */  
 
-    
+    // Método para imprimir animais disponíveis
+    public void imprimirAnimaisDisponiveis() {
+        System.out.println("Animais Disponiveis no Abrigo " + nomeAbrigo + ":\n");
+        for (Animal animal : animaisDisponiveis) {
+            System.out.println("Nome: " + animal.getNome() + ", Idade: " + animal.getIdade()
+                    + ", Raca: " + animal.getRaca() + ", Personalidade: " + animal.getPersonalidade());
+            
+        }
+        System.out.printf("\n");
+    }
 
     // Métodos para adicionar animal disponível para adoção 
     public void adicionarAnimal(Animal animal) {
