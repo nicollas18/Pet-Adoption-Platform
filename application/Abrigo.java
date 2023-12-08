@@ -7,6 +7,7 @@ public class Abrigo {
     private String nomeAbrigo;
     private String localizacao;
     private List<Animal> animaisDisponiveis;
+    private List<Usuario> usuariosRelacionados;
 
     /*------------------- BASICO ------------------------*/
     
@@ -15,6 +16,7 @@ public class Abrigo {
         this.nomeAbrigo = nomeAbrigo;
         this.localizacao = localizacao; 
         this.animaisDisponiveis = new ArrayList<>();
+        this.usuariosRelacionados = new ArrayList<>();
     }
 
     // Métodos getters
@@ -37,6 +39,17 @@ public class Abrigo {
     }
 
     /*---------------------------------------------------*/
+
+    /* --------------- MÉTODOS AUXILIARES--------------- */
+    // Método para adicionar usuário relacionado ao abrigo
+    public void adicionarUsuario(Usuario usuario) {
+        usuariosRelacionados.add(usuario);
+    }
+
+    /*---------------------------------------------------*/
+
+
+
 
 
     /* ----- 2:PROCESSAMENTO DE PEDIDOS DE ADOÇÃO ------ */  
@@ -80,21 +93,16 @@ public class Abrigo {
     public List<Animal> buscarAnimaisPorCriterio(String criterio, String valor) {
         List<Animal> animaisEncontrados = new ArrayList<>();
         switch (criterio) {
-            case "raça":
-                animaisEncontrados = animaisDisponiveis.stream()
-                        .filter(animal -> animal.getRaca().equalsIgnoreCase(valor))
-                        .collect(Collectors.toList());
+            case "raca":
+                animaisEncontrados = animaisDisponiveis.stream().filter(animal -> animal.getRaca().equalsIgnoreCase(valor)).collect(Collectors.toList());
+
                 break;
             case "idade":
                 int idade = Integer.parseInt(valor);
-                animaisEncontrados = animaisDisponiveis.stream()
-                        .filter(animal -> animal.getIdade() == idade)
-                        .collect(Collectors.toList());
+                animaisEncontrados = animaisDisponiveis.stream().filter(animal -> animal.getIdade() == idade).collect(Collectors.toList());
                 break;
             case "personalidade":
-                animaisEncontrados = animaisDisponiveis.stream()
-                        .filter(animal -> animal.getPersonalidade().equalsIgnoreCase(valor))
-                        .collect(Collectors.toList());
+                animaisEncontrados = animaisDisponiveis.stream().filter(animal -> animal.getPersonalidade().equalsIgnoreCase(valor)).collect(Collectors.toList());
                 break;
             // Outros critérios podem ser adicionados conforme necessário
             default:
