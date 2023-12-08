@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         /*--------------------------- BASE DE DADOS------------------------- */
 
         // USUARIOS:
@@ -20,6 +19,12 @@ public class Main {
         Usuario usuario8 = new Usuario("Laura", "laura@email.com", "890senha");
         Usuario usuario9 = new Usuario("Gabriel", "gabriel@email.com", "gabrielsenha");
         Usuario usuario10 = new Usuario("Clara", "clara@email.com", "4321clarasenha");
+        Usuario usuario11 = new Usuario("Gabriela", "gabriela@email.com", "789senha");
+        Usuario usuario12 = new Usuario("Renato", "renato@email.com", "renato123senha");
+        Usuario usuario13 = new Usuario("Beatriz", "beatriz@email.com", "456beatrizsenha");
+        Usuario usuario14 = new Usuario("Ricardo", "ricardo@email.com", "ricardo987senha");
+        Usuario usuario15 = new Usuario("Amanda", "amanda@email.com", "amanda321senha");
+
         
         // ANIMAIS:
         Animal animal1 = new Animal("Bolinha", 2, "Vira-lata", "Brincalhão");
@@ -32,56 +37,115 @@ public class Main {
         Animal animal8 = new Animal("Nina", 3, "Boxer", "Energético");
         Animal animal9 = new Animal("Bob", 2, "Bulldog Francês", "Afetuoso");
         Animal animal10 = new Animal("Tobby", 4, "Dálmata", "Protetor");
+        Animal animal11 = new Animal("Pelúcia", 2, "Chow Chow", "Alegre");
+        Animal animal12 = new Animal("Marley", 4, "Pastor Alemão", "Protetor");
+        Animal animal13 = new Animal("Luna", 3, "Shih Tzu", "Carinhosa");
+        Animal animal14 = new Animal("Boris", 5, "Rottweiler", "Leal");
+        Animal animal15 = new Animal("Miau", 1, "Gato Persa", "Curioso");
+
         
+        //RepositorioAbrigos repositorioAbrigos = new RepositorioAbrigos();
 
-        // ABRIGOS:
-        Abrigo abrigo1 = new Abrigo("Abrigo Amigo dos Animais", "Rua das Flores, 123");
+        Abrigo abrigo1 = new Abrigo("Abrigo Amigos dos Animais", "Rua das Flores, 123", "abrigoamigo@email.com", "(11) 1234-5678", " Segunda a Sábado, das 10h às 17h");
 
+        Abrigo abrigo2 = new Abrigo("Abrigo Patinhas Felizes", "Avenida dos Anjos, 456", "patinhasfelizes@email.com", "(22) 9876-5432", "Segunda a Sábado, das 10h às 17h");
+
+        Abrigo abrigo3 = new Abrigo("Lar dos Peludos", "Endereço: Travessa das Ruas, 789", "lardospeludos@email.com", "(33) 8765-4321", " Segunda a Domingo, das 8h às 20h");
+
+
+
+        // ABRIGO 1
         abrigo1.adicionarUsuario(usuario1);
         abrigo1.adicionarUsuario(usuario2);
         abrigo1.adicionarUsuario(usuario3);
         abrigo1.adicionarUsuario(usuario4);
         abrigo1.adicionarUsuario(usuario5);
-        abrigo1.adicionarUsuario(usuario6);
-        abrigo1.adicionarUsuario(usuario7);
-        abrigo1.adicionarUsuario(usuario8);
-        abrigo1.adicionarUsuario(usuario9);
-        abrigo1.adicionarUsuario(usuario10);
-
 
         abrigo1.adicionarAnimal(animal1);
         abrigo1.adicionarAnimal(animal2);
         abrigo1.adicionarAnimal(animal3);
         abrigo1.adicionarAnimal(animal4);
         abrigo1.adicionarAnimal(animal5);
-        abrigo1.adicionarAnimal(animal6);
-        abrigo1.adicionarAnimal(animal7);
-        abrigo1.adicionarAnimal(animal8);
-        abrigo1.adicionarAnimal(animal9);
-        abrigo1.adicionarAnimal(animal10);
+
+        // ABRIGO 2
+        
+        abrigo2.adicionarUsuario(usuario6);
+        abrigo2.adicionarUsuario(usuario7);
+        abrigo2.adicionarUsuario(usuario8);
+        abrigo2.adicionarUsuario(usuario9);
+        abrigo2.adicionarUsuario(usuario10);
+        
+        abrigo2.adicionarAnimal(animal6);
+        abrigo2.adicionarAnimal(animal7);
+        abrigo2.adicionarAnimal(animal8);
+        abrigo2.adicionarAnimal(animal9);
+        abrigo2.adicionarAnimal(animal10);
+
+
+        // ABRIGO 3
+
+        abrigo1.adicionarUsuario(usuario11);
+        abrigo1.adicionarUsuario(usuario12);
+        abrigo1.adicionarUsuario(usuario13);
+        abrigo1.adicionarUsuario(usuario14);
+        abrigo1.adicionarUsuario(usuario15);
+
+   
+        abrigo3.adicionarAnimal(animal11);
+        abrigo3.adicionarAnimal(animal12);
+        abrigo3.adicionarAnimal(animal13);
+        abrigo3.adicionarAnimal(animal14);
+        abrigo3.adicionarAnimal(animal15);
+
+
+        
 
         // ------------------------------------------------------------------
 
         while(true){
 
-
-            System.out.printf("\n");
-            System.out.println("O que voce deseja fazer?");
+            System.out.println();
+            System.out.println("Escolha um abrigo");
             System.out.println("0 - Sair do programa");
-            System.out.println("1 - Gereciamento de perfis de animais");
-            System.out.println("2 - Processamento de Pedidos de Adocao");
-            System.out.println("3 - Opcoes de pesquisa e filtro");
-            System.out.printf("\n");
-            
+            System.out.println("1 - Abrigo Amigos dos Animais");
+            System.out.println("2 - Abrigo Patinhas Felizes");
+            System.out.println("3 - Lar dos Peludos");
 
             Scanner scan = new Scanner(System.in);
             int input = scan.nextInt();
-            
+            Abrigo abrigoEscolhido = new Abrigo(null, null, null, null, null);
+
             if (input == 0) {
                 break;
             }
 
+            switch (input) {
+                case 1:
+                    abrigoEscolhido = abrigo1;
+                    break;
+
+                case 2:
+                    abrigoEscolhido = abrigo2;
+                    break;
+
+                case 3:
+                    abrigoEscolhido = abrigo3;
+                    break;
+
+                default:
+                    System.out.println("Opcao invalida.");
+                    break;
+            }
+            
             System.out.printf("\n");
+            System.out.println("O que deseja fazer?");
+            System.out.println("1 - Gereciamento de perfis de animais");
+            System.out.println("2 - Processamento de Pedidos de Adocao");
+            System.out.println("3 - Opcoes de pesquisa e filtro");
+            System.out.println("4 - Perfil de organizações de abrigo e resgaste");
+            System.out.printf("\n");
+
+            input = scan.nextInt();
     
             switch (input) {
 
@@ -97,7 +161,7 @@ public class Main {
                 switch (opcaoAnimal) {
                     case 1:
                         // Listar animais disponíveis
-                        abrigo1.imprimirAnimaisDisponiveis();
+                        abrigoEscolhido.imprimirAnimaisDisponiveis();
                         break;
 
                     case 2:
@@ -114,7 +178,7 @@ public class Main {
                         String personalidadeAnimal = scan.nextLine();
                         
                         Animal novoAnimal = new Animal(nomeAnimal, idadeAnimal, racaAnimal, personalidadeAnimal);
-                        abrigo1.adicionarAnimal(novoAnimal);
+                        abrigoEscolhido.adicionarAnimal(novoAnimal);
                         System.out.println("Novo animal adicionado com sucesso!");
                         break;
 
@@ -127,13 +191,13 @@ public class Main {
                 // CASO 2 MAIS EXTERNO
                 case 2:
                 System.out.println("Animais disponiveis para adocao:");
-                abrigo1.imprimirAnimaisDisponiveis();
+                abrigoEscolhido.imprimirAnimaisDisponiveis();
                 System.out.println("Selecione o numero do animal desejado para adocao:");
                 int numeroAnimal = scan.nextInt();
                 
                 // Verificar se o número do animal é válido
-                if (numeroAnimal >= 1 && numeroAnimal <= abrigo1.getAnimaisDisponiveis().size()) {
-                    Animal animalSelecionado = abrigo1.getAnimaisDisponiveis().get(numeroAnimal - 1);
+                if (numeroAnimal >= 1 && numeroAnimal <= abrigoEscolhido.getAnimaisDisponiveis().size()) {
+                    Animal animalSelecionado = abrigoEscolhido.getAnimaisDisponiveis().get(numeroAnimal - 1);
                     
                     // Simular o envio de pedido de adoção por um usuário
                     System.out.println("Digite seu nome de usuario para enviar o pedido:");
@@ -141,13 +205,13 @@ public class Main {
                     String nomeUsuario = scan.nextLine();
                     
                     // Verificar se o usuário está relacionado ao abrigo
-                    boolean usuarioExiste = abrigo1.getUsuariosRelacionados().stream().anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
+                    boolean usuarioExiste = abrigoEscolhido.getUsuariosRelacionados().stream().anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
                     
                     if (usuarioExiste) {
-                        Usuario usuarioPedido = abrigo1.getUsuariosRelacionados().stream().filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario)).findFirst().orElse(null);
+                        Usuario usuarioPedido = abrigoEscolhido.getUsuariosRelacionados().stream().filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario)).findFirst().orElse(null);
                         
                         // Processamento do pedido de adoção
-                        boolean pedidoAceito = abrigo1.solicitarAdocao(usuarioPedido, animalSelecionado);
+                        boolean pedidoAceito = abrigoEscolhido.solicitarAdocao(usuarioPedido, animalSelecionado);
                         
 
                         if (pedidoAceito) {
@@ -181,7 +245,7 @@ public class Main {
 
                         
                         
-                        List<Animal> animaisPorRaca = abrigo1.buscarAnimaisPorCriterio("raca", racaPesquisa);
+                        List<Animal> animaisPorRaca = abrigoEscolhido.buscarAnimaisPorCriterio("raca", racaPesquisa);
 
                         if (!animaisPorRaca.isEmpty()) {
                             System.out.println("Animais encontrados com a raca '" + racaPesquisa + "':");
@@ -197,7 +261,7 @@ public class Main {
                         System.out.println("Digite a idade para pesquisa:");
                         int idadePesquisa = scan.nextInt();
                         
-                        List<Animal> animaisPorIdade = abrigo1.buscarAnimaisPorCriterio("idade", String.valueOf(idadePesquisa));
+                        List<Animal> animaisPorIdade = abrigoEscolhido.buscarAnimaisPorCriterio("idade", String.valueOf(idadePesquisa));
                         if (!animaisPorIdade.isEmpty()) {
                             System.out.println("Animais encontrados com a idade '" + idadePesquisa + "':");
                             for (Animal animal : animaisPorIdade) {
@@ -213,7 +277,7 @@ public class Main {
                         scan.nextLine(); // Limpar o buffer do scanner
                         String personalidadePesquisa = scan.nextLine();
                         
-                        List<Animal> animaisPorPersonalidade = abrigo1.buscarAnimaisPorCriterio("personalidade", personalidadePesquisa);
+                        List<Animal> animaisPorPersonalidade = abrigoEscolhido.buscarAnimaisPorCriterio("personalidade", personalidadePesquisa);
                         if (!animaisPorPersonalidade.isEmpty()) {
                             System.out.println("Animais encontrados com a personalidade '" + personalidadePesquisa + "':");
                             for (Animal animal : animaisPorPersonalidade) {
@@ -227,6 +291,17 @@ public class Main {
                         System.out.println("Opção inválida.");
                         break;
                 }
+                break;
+
+                case 4:
+                abrigo1.imprimirPerfilAbrigo();
+                abrigo2.imprimirPerfilAbrigo();
+                abrigo3.imprimirPerfilAbrigo();
+
+                break;
+
+                case 5:
+                
                 break;
 
                 default:

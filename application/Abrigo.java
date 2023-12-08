@@ -6,15 +6,21 @@ public class Abrigo {
 
     private String nomeAbrigo;
     private String localizacao;
+    private String contato;
+    private String telefone;
+    private String horario;
     private List<Animal> animaisDisponiveis;
     private List<Usuario> usuariosRelacionados;
 
     /*------------------- BASICO ------------------------*/
     
     // Construtor
-    public Abrigo(String nomeAbrigo, String localizacao) {
+    public Abrigo(String nomeAbrigo, String localizacao, String contato, String telefone, String horario) {
         this.nomeAbrigo = nomeAbrigo;
         this.localizacao = localizacao; 
+        this.contato = contato;
+        this.telefone = telefone;
+        this.horario = horario; /* ------------ */
         this.animaisDisponiveis = new ArrayList<>();
         this.usuariosRelacionados = new ArrayList<>();
     }
@@ -26,6 +32,18 @@ public class Abrigo {
 
     public String getLocalizacao() {
         return localizacao;
+    }
+
+    public String getContato() {
+        return contato;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getHorario() {
+        return horario;
     }
 
     public List<Animal> getAnimaisDisponiveis() {
@@ -46,6 +64,18 @@ public class Abrigo {
         this.localizacao = localizacao;
     }
 
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setHorario(String Horario) {
+        this.horario = horario;
+    }
+
     public void adicionarAnimal(Animal animal) {
         animaisDisponiveis.add(animal);
     }
@@ -56,12 +86,7 @@ public class Abrigo {
 
     /*---------------------------------------------------*/
 
-    /* --------------- MÉTODOS AUXILIARES--------------- */
-
     
-
-    /*---------------------------------------------------*/
-
 
 
     /* ----- 2:PROCESSAMENTO DE PEDIDOS DE ADOÇÃO ------ */  
@@ -119,5 +144,14 @@ public class Abrigo {
 
     /*---------------------------------------------------*/
 
-    
+    public void imprimirPerfilAbrigo() {
+        System.out.println();
+        System.out.println("Nome do Abrigo: " + this.nomeAbrigo);
+        System.out.println("Endereco: " + this.localizacao);
+        System.out.println("Contato: " + this.contato);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("Horario: " + this.horario);
+        System.out.println();
+    }  
 }
+
