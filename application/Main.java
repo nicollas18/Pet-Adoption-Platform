@@ -6,34 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        /*
-
-        // Criando um animal
-        Animal animal = new Animal("Bolinha", 2, "Vira-lata", "Brincalhão");
-        
-        // Criando um abrigo
-        Abrigo abrigo = new Abrigo("Abrigo Amigo dos Animais", "Rua das Flores, 123");
-        
-        // Adicionando o animal ao abrigo
-        abrigo.adicionarAnimal(animal);
-
-        // Criando um usuário
-        Usuario usuario = new Usuario("Maria", "maria@email.com", "senha123");
-        
-        // Simulando a solicitação de adoção
-        boolean adocaoAprovada = abrigo.solicitarAdocao(usuario, animal);
-        
-        if (adocaoAprovada) {
-            System.out.println("Adocao aprovada! Parabens, " + usuario.getNome() + "!");
-        } else {
-            System.out.println("Desculpe, a adocao nao foi aprovada.");
-        }
-
-        // Realizando uma busca por raça
-        List<Animal> animaisPorRaca = abrigo.buscarAnimaisPorCriterio("raça", "Vira-lata");
-        // Isso retornará uma lista de animais com raça "Vira-lata", se houver no abrigo
-
-        */ 
 
         /*--------------------------- BASE DE DADOS------------------------- */
 
@@ -71,46 +43,91 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         int input = scan.nextInt();
+        System.out.printf("\n");
 
         switch (input) {
+
             case 1:
-                abrigo1.imprimirAnimaisDisponiveis();
-                
-                break;
+            System.out.println("Informe a operaçao desejada");
+            System.out.println("1 - Listar animais disponiveis");
+            System.out.println("2 - Adicionar novo animal");
+            System.out.printf("\n");
+            int opcaoAnimal = scan.nextInt();
+            
+            
+            switch (opcaoAnimal) {
+                case 1:
+                    // Listar animais disponíveis
+                    abrigo1.imprimirAnimaisDisponiveis();
+                    break;
+
+                case 2:
+                    // Adicionar novo animal
+                    System.out.println("Digite o nome do animal:");
+                    scan.nextLine(); // Limpar o buffer do scanner
+                    String nomeAnimal = scan.nextLine();
+                    System.out.println("Digite a idade do animal:");
+                    int idadeAnimal = scan.nextInt();
+                    System.out.println("Digite a raça do animal:");
+                    scan.nextLine(); // Limpar o buffer do scanner
+                    String racaAnimal = scan.nextLine();
+                    System.out.println("Digite a personalidade do animal:");
+                    String personalidadeAnimal = scan.nextLine();
+                    
+                    Animal novoAnimal = new Animal(nomeAnimal, idadeAnimal, racaAnimal, personalidadeAnimal);
+                    abrigo1.adicionarAnimal(novoAnimal);
+                    System.out.println("Novo animal adicionado com sucesso!");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
+            }
+            break; // break do caso 1 mais externo
 
             case 2:
-                abrigo1.solicitarAdocao(null, animal3);
-                break;
-
-            case 3:
-                System.out.println("Informe o criterio de busca e o seu tipo");
-
-                //String criterio = scan.nextLine();
-                //String tipo     = scan.nextLine();
-
-                List<Animal> animaisEncontrados = new ArrayList<>();
-
-                animaisEncontrados = abrigo1.buscarAnimaisPorCriterio("raca", "Vira-lata");
-
-                for (int i = 0; i < animaisEncontrados.size(); i++) {
-                    System.out.println(animaisEncontrados.get(i));
+            System.out.println("Animais disponiveis para adocao:");
+            abrigo1.imprimirAnimaisDisponiveis();
+            System.out.println("Selecione o numero do animal desejado para adocao:");
+            int numeroAnimal = scan.nextInt();
+            
+            // Verificar se o número do animal é válido
+            if (numeroAnimal >= 1 && numeroAnimal <= abrigo1.getAnimaisDisponiveis().size()) {
+                Animal animalSelecionado = abrigo1.getAnimaisDisponiveis().get(numeroAnimal - 1);
+                
+                // Simular o envio de pedido de adoção por um usuário
+                System.out.println("Digite seu nome de usuario para enviar o pedido:");
+                scan.nextLine(); // Limpar o buffer do scanner
+                String nomeUsuario = scan.nextLine();
+                
+                // Verificar se o usuário está relacionado ao abrigo
+                boolean usuarioExiste = abrigo1.getUsuariosRelacionados().stream()
+                        .anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
+                
+                if (usuarioExiste) {
+                    Usuario usuarioPedido = abrigo1.getUsuariosRelacionados().stream()
+                            .filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario))
+                            .findFirst().orElse(null);
+                    
+                    // Processamento do pedido de adoção
+                    boolean pedidoAceito = abrigo1.solicitarAdocao(usuarioPedido, animalSelecionado);
+                    
+                    if (pedidoAceito) {
+                        System.out.println("Pedido de adocao enviado com sucesso!");
+                    } else {
+                        System.out.println("Desculpe, o pedido de adocao não pode ser concluido.");
+                    }
+                } else {
+                    System.out.println("Usuario nao encontrado no abrigo.");
                 }
-
-                break;
+            } else {
+                System.out.println("Numero de animal invalido.");
+            }
+            break;
+        
 
             default:
                 break;
         }
-
-
-
-
-        
-        
-
-        
-
-
-
     }
 }

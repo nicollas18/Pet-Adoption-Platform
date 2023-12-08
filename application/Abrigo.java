@@ -28,6 +28,10 @@ public class Abrigo {
         return localizacao;
     }
 
+    public List<Animal> getAnimaisDisponiveis() {
+        return animaisDisponiveis;
+    }
+
     // Métodos setters
 
     public void setNomeAbrigo(String nomeAbrigo) {
@@ -46,9 +50,11 @@ public class Abrigo {
         usuariosRelacionados.add(usuario);
     }
 
+    public List<Usuario> getUsuariosRelacionados() {
+        return this.usuariosRelacionados;
+    }
+
     /*---------------------------------------------------*/
-
-
 
 
 
@@ -64,6 +70,7 @@ public class Abrigo {
         }
         System.out.printf("\n");
     }
+
 
     // Métodos para adicionar animal disponível para adoção 
     public void adicionarAnimal(Animal animal) {
