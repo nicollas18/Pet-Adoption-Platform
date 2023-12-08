@@ -32,6 +32,10 @@ public class Abrigo {
         return animaisDisponiveis;
     }
 
+    public List<Usuario> getUsuariosRelacionados() {
+        return this.usuariosRelacionados;
+    } 
+
     // Métodos setters
 
     public void setNomeAbrigo(String nomeAbrigo) {
@@ -42,17 +46,19 @@ public class Abrigo {
         this.localizacao = localizacao;
     }
 
-    /*---------------------------------------------------*/
+    public void adicionarAnimal(Animal animal) {
+        animaisDisponiveis.add(animal);
+    }
 
-    /* --------------- MÉTODOS AUXILIARES--------------- */
-    // Método para adicionar usuário relacionado ao abrigo
     public void adicionarUsuario(Usuario usuario) {
         usuariosRelacionados.add(usuario);
     }
 
-    public List<Usuario> getUsuariosRelacionados() {
-        return this.usuariosRelacionados;
-    }
+    /*---------------------------------------------------*/
+
+    /* --------------- MÉTODOS AUXILIARES--------------- */
+
+    
 
     /*---------------------------------------------------*/
 
@@ -64,17 +70,10 @@ public class Abrigo {
     public void imprimirAnimaisDisponiveis() {
         System.out.println("Animais Disponiveis no Abrigo " + nomeAbrigo + ":\n");
         for (Animal animal : animaisDisponiveis) {
-            System.out.println("Nome: " + animal.getNome() + ", Idade: " + animal.getIdade()
-                    + ", Raca: " + animal.getRaca() + ", Personalidade: " + animal.getPersonalidade());
-            
+            System.out.printf("Nome: %-10s | Idade: %-3d | Raca: %-20s | Personalidade: %-15s\n",
+                    animal.getNome(), animal.getIdade(), animal.getRaca(), animal.getPersonalidade());
         }
         System.out.printf("\n");
-    }
-
-
-    // Métodos para adicionar animal disponível para adoção 
-    public void adicionarAnimal(Animal animal) {
-        animaisDisponiveis.add(animal);
     }
 
     // Método para processar solicitação de adoção
@@ -113,7 +112,7 @@ public class Abrigo {
                 break;
             // Outros critérios podem ser adicionados conforme necessário
             default:
-                System.out.println("Critério de busca inválido.");
+                System.out.println("Criterio de busca invalido.");
         }
         return animaisEncontrados;
     }
