@@ -101,13 +101,10 @@ public class Main {
                 String nomeUsuario = scan.nextLine();
                 
                 // Verificar se o usuário está relacionado ao abrigo
-                boolean usuarioExiste = abrigo1.getUsuariosRelacionados().stream()
-                        .anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
+                boolean usuarioExiste = abrigo1.getUsuariosRelacionados().stream().anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
                 
                 if (usuarioExiste) {
-                    Usuario usuarioPedido = abrigo1.getUsuariosRelacionados().stream()
-                            .filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario))
-                            .findFirst().orElse(null);
+                    Usuario usuarioPedido = abrigo1.getUsuariosRelacionados().stream().filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario)).findFirst().orElse(null);
                     
                     // Processamento do pedido de adoção
                     boolean pedidoAceito = abrigo1.solicitarAdocao(usuarioPedido, animalSelecionado);
