@@ -11,6 +11,24 @@ import java.io.IOException;
 
 public class Main {
 
+    private static void imprimirRecursoEducacional(String caminhoDoArquivo) {
+        File arquivo = new File(caminhoDoArquivo);
+
+        try {
+            FileReader fileReader = new FileReader(arquivo);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String linha;
+
+            while ((linha = bufferedReader.readLine()) != null) {
+                System.out.println(linha);
+            }
+
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
 
         /*--------------------------- BASE DE DADOS------------------------- */
@@ -308,89 +326,33 @@ public class Main {
                 break;
 
                 case 5:
-                System.out.println("Recursos Educacionais Disponiveis:");
+                System.out.println("Recursos Educacionais Disponíveis:");
                 System.out.println("1 - Cuidados Básicos com Animais de Estimação");
                 System.out.println("2 - Guia de Adoção Responsável");
                 System.out.println("3 - Comportamento Animal");
 
                 System.out.println();
-                System.out.println("Sobre qual voce desejar ler?");
+                System.out.println("Sobre qual você deseja ler?");
 
                 int opcao = scan.nextInt();
+                String caminhoDoArquivo = "";
 
-                System.out.println();
-
-                if (opcao == 1) {
-                    
-                    String caminhoDoArquivo = "1 - Cuidados Basico.txt";
-
-                    File arquivo = new File(caminhoDoArquivo);
-
-                    try {
-                        FileReader fileReader = new FileReader(arquivo);
-
-                        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-                        String linha;
-
-                        while ((linha = bufferedReader.readLine()) != null) {
-                            System.out.println(linha);
-                        }
-
-                        bufferedReader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+                switch (opcao) {
+                    case 1:
+                        caminhoDoArquivo = "1 - Cuidados Basicos.txt";
+                        break;
+                    case 2:
+                        caminhoDoArquivo = "2 - Guia de Adocao Responsavel.txt";
+                        break;
+                    case 3:
+                        caminhoDoArquivo = "3 - Comportamento Animal.txt";
+                        break;
+                    default:
+                        System.out.println("Opção Inválida!");
+                        break;
                 }
 
-                else if (opcao == 2) {
-
-                    String caminhoDoArquivo = "2 - Guia de Adocao Responsavel.txt";
-
-                    File arquivo = new File(caminhoDoArquivo);
-
-                    try {
-                        FileReader fileReader = new FileReader(arquivo);
-
-                        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-                        String linha;
-
-                        while ((linha = bufferedReader.readLine()) != null) {
-                            System.out.println(linha);
-                        }
-
-                        bufferedReader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                  
-                }
-                else if (opcao == 3) {
-
-                    String caminhoDoArquivo = "3 - Comportamento Animal.txt";
-
-                    File arquivo = new File(caminhoDoArquivo);
-
-                    try {
-                        FileReader fileReader = new FileReader(arquivo);
-
-                        BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-                        String linha;
-
-                        while ((linha = bufferedReader.readLine()) != null) {
-                            System.out.println(linha);
-                        }
-
-                        bufferedReader.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-                else System.out.println("Opcao Invalida!");
-
+                imprimirRecursoEducacional(caminhoDoArquivo);
                 break;
 
                 default:
