@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -316,87 +321,73 @@ public class Main {
                 System.out.println();
 
                 if (opcao == 1) {
-                    System.out.println("Cuidados Básicos com Animais de Estimação\r\n" + //
-                            "\r\n" + //
-                            "Os cuidados com seu animal de estimação são fundamentais para garantir uma vida longa e saudável. Aqui estão algumas dicas importantes para garantir o bem-estar do seu companheiro:\r\n" + //
-                            "\r\n" + //
-                            "Alimentação Balanceada:\r\n" + //
-                            "\r\n" + //
-                            "Ofereça uma dieta adequada ao seu pet, de acordo com sua espécie, idade e porte. Consulte um veterinário para orientações específicas sobre a quantidade e tipo de alimento ideal.\r\n" + //
-                            "Evite oferecer alimentos inadequados, como chocolate, uva, cebola e alimentos muito condimentados, que podem ser prejudiciais à saúde do animal.\r\n" + //
-                            "Higiene Diária:\r\n" + //
-                            "\r\n" + //
-                            "Mantenha a higiene do seu animal, realizando escovações regulares, banhos quando necessário e corte de unhas.\r\n" + //
-                            "Limpeza do ambiente onde o animal vive é crucial para prevenir doenças e parasitas. Lave comedouros e bebedouros regularmente.\r\n" + //
-                            "Saúde e Bem-Estar:\r\n" + //
-                            "\r\n" + //
-                            "Mantenha as vacinações e consultas veterinárias em dia para prevenir doenças e identificar problemas de saúde precocemente.\r\n" + //
-                            "Proporcione atividades físicas e mentais para manter seu pet saudável e feliz. Brincadeiras e passeios são essenciais para o bem-estar emocional.\r\n" + //
-                            "Lembre-se, cada animal é único, por isso, é fundamental estar atento às necessidades individuais do seu pet e buscar orientação profissional para um cuidado adequado e personalizado.\r\n" + //
-                            "\r\n" + //
-                            "");
+                    
+                    String caminhoDoArquivo = "1 - Cuidados Basico.txt";
+
+                    File arquivo = new File(caminhoDoArquivo);
+
+                    try {
+                        FileReader fileReader = new FileReader(arquivo);
+
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                        String linha;
+
+                        while ((linha = bufferedReader.readLine()) != null) {
+                            System.out.println(linha);
+                        }
+
+                        bufferedReader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
 
                 else if (opcao == 2) {
-                  System.out.println("Guia de Adoção Responsável\r\n" + //
-                          "\r\n" + //
-                          "Adotar um animal de estimação é uma decisão que requer responsabilidade e cuidado. Seguem alguns passos importantes para garantir uma adoção responsável e um cuidado adequado com o novo membro da família:\r\n" + //
-                          "\r\n" + //
-                          "Pesquise e Prepare-se:\r\n" + //
-                          "\r\n" + //
-                          "Antes de adotar, conheça a espécie e raça do animal que pretende ter. Esteja ciente das suas necessidades de alimentação, exercício e cuidados de saúde.\r\n" + //
-                          "Escolha Consciente:\r\n" + //
-                          "\r\n" + //
-                          "Visite abrigos de animais e considere a personalidade, porte e necessidades do animal. Escolha um pet que se adapte ao seu estilo de vida.\r\n" + //
-                          "Consulta Veterinária:\r\n" + //
-                          "\r\n" + //
-                          "Assim que adotar, leve o animal ao veterinário para um check-up e estabeleça um calendário de vacinações e cuidados preventivos.\r\n" + //
-                          "Ambiente Seguro:\r\n" + //
-                          "\r\n" + //
-                          "Prepare o ambiente em casa para receber o novo animal. Garanta uma área segura, com comedouro, bebedouro, cama e brinquedos adequados.\r\n" + //
-                          "Tempo e Dedicação:\r\n" + //
-                          "\r\n" + //
-                          "Reserve tempo para criar um vínculo com seu animal. Passeie, brinque e proporcione atenção diária para fortalecer o relacionamento.\r\n" + //
-                          "Educação e Treinamento:\r\n" + //
-                          "\r\n" + //
-                          "Eduque seu pet com carinho e paciência. Treinamento básico é essencial para uma convivência harmoniosa.\r\n" + //
-                          "Identificação e Registro:\r\n" + //
-                          "\r\n" + //
-                          "Coloque uma identificação no animal (como uma coleira com plaquinha) e mantenha os registros atualizados.\r\n" + //
-                          "Amor e Cuidado Contínuo:\r\n" + //
-                          "\r\n" + //
-                          "Cuide do seu animal com amor e responsabilidade ao longo de toda a vida dele. Proporcione alimentação adequada, exercício regular e cuidados veterinários.\r\n" + //
-                          "Adotar um animal de estimação é um compromisso para toda a vida. Ao oferecer um lar amoroso e cuidados adequados, você contribui para o bem-estar do animal.");
-                
+
+                    String caminhoDoArquivo = "2 - Guia de Adocao Responsavel.txt";
+
+                    File arquivo = new File(caminhoDoArquivo);
+
+                    try {
+                        FileReader fileReader = new FileReader(arquivo);
+
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                        String linha;
+
+                        while ((linha = bufferedReader.readLine()) != null) {
+                            System.out.println(linha);
+                        }
+
+                        bufferedReader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                  
                 }
                 else if (opcao == 3) {
-                    System.out.println("Entender o comportamento dos animais é fundamental para uma convivência saudável e harmoniosa. Aqui estão algumas informações sobre comportamento e dicas para lidar com diferentes situações:\r\n" + //
-                            "\r\n" + //
-                            "Compreendendo os Instintos:\r\n" + //
-                            "\r\n" + //
-                            "Animais têm comportamentos instintivos baseados na sua espécie. Por exemplo, gatos arranham para afiar suas garras e cães cheiram para conhecer o ambiente.\r\n" + //
-                            "Comunicação Animal:\r\n" + //
-                            "\r\n" + //
-                            "Os animais se comunicam de diversas formas, seja através de vocalizações, linguagem corporal ou odores. Aprenda a interpretar os sinais para entender as necessidades do seu pet.\r\n" + //
-                            "Estresse e Ansiedade:\r\n" + //
-                            "\r\n" + //
-                            "Mudanças na rotina, medo de barulhos ou separação podem causar estresse nos animais. Procure identificar e minimizar esses gatilhos.\r\n" + //
-                            "Socialização:\r\n" + //
-                            "\r\n" + //
-                            "A socialização é essencial para a saúde mental dos animais. Introduza-os a outros animais e pessoas gradualmente para evitar comportamentos agressivos ou medrosos.\r\n" + //
-                            "Enriquecimento Ambiental:\r\n" + //
-                            "\r\n" + //
-                            "Forneça estímulos mentais e físicos para evitar o tédio. Brinquedos interativos, desafios e atividades ajudam a manter o animal ativo e feliz.\r\n" + //
-                            "Treinamento Positivo:\r\n" + //
-                            "\r\n" + //
-                            "Use métodos de treinamento positivos, baseados em recompensas e elogios, para ensinar e reforçar comportamentos desejados.\r\n" + //
-                            "Respeite os Limites:\r\n" + //
-                            "\r\n" + //
-                            "Reconheça os limites do seu pet. Seja sensível aos momentos em que ele precisa de espaço ou descanso.\r\n" + //
-                            "Consulte um Profissional:\r\n" + //
-                            "\r\n" + //
-                            "Se enfrentar problemas de comportamento persistentes, busque orientação de um profissional, como um veterinário comportamentalista.\r\n" + //
-                            "Entender o comportamento animal é uma jornada contínua. Ao investir tempo para compreender e atender às necessidades do seu animal, você constrói uma relação mais forte e saudável.");
+
+                    String caminhoDoArquivo = "3 - Comportamento Animal.txt";
+
+                    File arquivo = new File(caminhoDoArquivo);
+
+                    try {
+                        FileReader fileReader = new FileReader(arquivo);
+
+                        BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                        String linha;
+
+                        while ((linha = bufferedReader.readLine()) != null) {
+                            System.out.println(linha);
+                        }
+
+                        bufferedReader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                 }
                 else System.out.println("Opcao Invalida!");
 
