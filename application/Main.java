@@ -68,6 +68,31 @@ public class Main {
         Animal animal14 = new Animal("Boris", 5, "Rottweiler", "Leal");
         Animal animal15 = new Animal("Miau", 1, "Gato Persa", "Curioso");
 
+        Evento eventoAbrigo1_1 = new Evento("Campanha de Adoção de Inverno",
+        "Campanha especial para adoção de animais durante o inverno. Descontos especiais e kits de boas-vindas para os novos donos",
+        "15 de julho de 2024", "Campanha de Adoção");
+
+        Evento eventoAbrigo1_2 = new Evento("Arrecadação de Fundos",
+        "Evento para arrecadar fundos para a construção de novos canis. Rifa e bazares beneficentes serão realizados.",
+        "30 de setembro de 2024", "Arrecadação de Fundos");
+
+        // Eventos para o Abrigo 2
+        Evento eventoAbrigo2_1 = new Evento("Feira de Adoção",
+        "Feira com diversos animais disponíveis para adoção. Palestras e atividades para crianças.",
+        "5 de agosto de 2024", "Feira de Adoção");
+
+        Evento eventoAbrigo2_2 = new Evento("Campanha de Vacinação",
+        "Vacinação gratuita para cães e gatos. Todos são bem-vindos!",
+        "20 de outubro de 2024", "Campanha de Saúde");
+
+        Evento eventoAbrigo3_1 = new Evento("Caminhada Solidária",
+        "Caminhada com os animais disponíveis para adoção. Todos estão convidados a participar!",
+        "12 de agosto de 2024", "Caminhada Beneficente");
+
+        Evento eventoAbrigo3_2 = new Evento("Feira de Adoção Especial",
+        "Feira especial com atividades para famílias. Adoção de animais e brindes para os novos donos.",
+        "25 de outubro de 2024", "Feira de Adoção Especial");
+
         
         //RepositorioAbrigos repositorioAbrigos = new RepositorioAbrigos();
 
@@ -92,6 +117,10 @@ public class Main {
         abrigo1.adicionarAnimal(animal4);
         abrigo1.adicionarAnimal(animal5);
 
+        abrigo1.adicionarEvento(eventoAbrigo1_1);
+        abrigo1.adicionarEvento(eventoAbrigo1_2);
+        
+
         // ABRIGO 2
         
         abrigo2.adicionarUsuario(usuario6);
@@ -105,6 +134,9 @@ public class Main {
         abrigo2.adicionarAnimal(animal8);
         abrigo2.adicionarAnimal(animal9);
         abrigo2.adicionarAnimal(animal10);
+
+        abrigo2.adicionarEvento(eventoAbrigo2_1);
+        abrigo2.adicionarEvento(eventoAbrigo2_2);
 
 
         // ABRIGO 3
@@ -121,6 +153,9 @@ public class Main {
         abrigo3.adicionarAnimal(animal13);
         abrigo3.adicionarAnimal(animal14);
         abrigo3.adicionarAnimal(animal15);
+
+        abrigo3.adicionarEvento(eventoAbrigo3_1);
+        abrigo3.adicionarEvento(eventoAbrigo3_2);
 
 
         
@@ -169,6 +204,7 @@ public class Main {
             System.out.println("3 - Opcoes de pesquisa e filtro");
             System.out.println("4 - Perfil de organizações de abrigo e resgaste");
             System.out.println("5 - Recursos Educacionais");
+            System.out.println("6 - Listagem e Gerenciamento de Eventos");
             System.out.printf("\n");
 
             input = scan.nextInt();
@@ -353,6 +389,42 @@ public class Main {
                 }
 
                 imprimirRecursoEducacional(caminhoDoArquivo);
+                break;
+
+                case 6:
+                System.out.println("\nO que voce quer?");
+                System.out.println("1 - Adicionar um Evento");
+                System.out.println("2 - Lista dos Eventos");
+
+                input = scan.nextInt();
+
+                switch (input) {
+                    case 1:
+                    System.out.println("Digite o nome do Evento:");
+                    scan.nextLine();
+                    String nomeEvento = scan.nextLine();
+                    System.out.println("Digite a descricao do Evento");
+                    
+                    String descricao = scan.nextLine();
+                    System.out.println("Digite a data do Evento");
+                    
+                    String data = scan.nextLine();
+                    System.out.println("Digite o tipo do Evento");
+                    
+                    String tipo = scan.nextLine();
+
+                    Evento novoEvento = new Evento(nomeEvento, descricao, data, tipo);
+
+                    abrigoEscolhido.adicionarEvento(novoEvento);
+
+                        break;
+
+                    case 2:
+                    abrigoEscolhido.listarEventos();
+                        break;
+                    default:
+                        break;
+                }
                 break;
 
                 default:

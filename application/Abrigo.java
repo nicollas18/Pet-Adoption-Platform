@@ -11,6 +11,7 @@ public class Abrigo {
     private String horario;
     private List<Animal> animaisDisponiveis;
     private List<Usuario> usuariosRelacionados;
+    private List<Evento> eventos;
 
     /*------------------- BASICO ------------------------*/
     
@@ -23,6 +24,7 @@ public class Abrigo {
         this.horario = horario; /* ------------ */
         this.animaisDisponiveis = new ArrayList<>();
         this.usuariosRelacionados = new ArrayList<>();
+        this.eventos = new ArrayList<>();
     }
 
     // Métodos getters
@@ -153,5 +155,20 @@ public class Abrigo {
         System.out.println("Horario: " + this.horario);
         System.out.println();
     }  
+
+    public void adicionarEvento(Evento evento) {
+        eventos.add(evento);
+    }
+
+    public void listarEventos() {
+        System.out.println("Eventos do Abrigo: " + this.nomeAbrigo);
+        for (Evento evento : eventos) {
+            System.out.println("Nome: " + evento.getNome());
+            System.out.println("Descrição: " + evento.getDescricao());
+            System.out.println("Data: " + evento.getData());
+            System.out.println("Tipo: " + evento.getTipo());
+            System.out.println("--------------------");
+        }
+    }
 }
 
