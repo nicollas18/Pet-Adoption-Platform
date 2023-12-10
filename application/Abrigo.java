@@ -170,5 +170,24 @@ public class Abrigo {
             System.out.println("--------------------");
         }
     }
+
+    public void atualizarContaUsuario(Usuario usuarioExistente, Usuario novosDadosUsuario) {
+        int index = usuariosRelacionados.indexOf(usuarioExistente);
+        if (index != -1) {
+            usuariosRelacionados.set(index, novosDadosUsuario);
+            System.out.println("Conta de usuário atualizada com sucesso!");
+        } else {
+            System.out.println("Usuário não encontrado para atualização.");
+        }
+    }
+
+    public void excluirContaUsuario(Usuario usuarioParaExcluir) {
+        boolean removido = usuariosRelacionados.remove(usuarioParaExcluir);
+        if (removido) {
+            System.out.println("Conta de usuário excluída com sucesso!");
+        } else {
+            System.out.println("Usuário não encontrado para exclusão.");
+        }
+    }
 }
 

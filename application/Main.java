@@ -205,6 +205,7 @@ public class Main {
             System.out.println("4 - Perfil de organizações de abrigo e resgaste");
             System.out.println("5 - Recursos Educacionais");
             System.out.println("6 - Listagem e Gerenciamento de Eventos");
+            System.out.println("7 - Gerenciamento de Contas de usuário");
             System.out.printf("\n");
 
             input = scan.nextInt();
@@ -392,39 +393,111 @@ public class Main {
                 break;
 
                 case 6:
-                System.out.println("\nO que voce quer?");
-                System.out.println("1 - Adicionar um Evento");
-                System.out.println("2 - Lista dos Eventos");
+                    System.out.println("\nO que voce quer?");
+                    System.out.println("1 - Adicionar um Evento");
+                    System.out.println("2 - Lista dos Eventos");
 
-                input = scan.nextInt();
+                    input = scan.nextInt();
 
-                switch (input) {
-                    case 1:
-                    System.out.println("Digite o nome do Evento:");
-                    scan.nextLine();
-                    String nomeEvento = scan.nextLine();
-                    System.out.println("Digite a descricao do Evento");
-                    
-                    String descricao = scan.nextLine();
-                    System.out.println("Digite a data do Evento");
-                    
-                    String data = scan.nextLine();
-                    System.out.println("Digite o tipo do Evento");
-                    
-                    String tipo = scan.nextLine();
+                    switch (input) {
+                        case 1:
+                        System.out.println("Digite o nome do Evento:");
+                        scan.nextLine();
+                        String nomeEvento = scan.nextLine();
+                        System.out.println("Digite a descricao do Evento");
+                        
+                        String descricao = scan.nextLine();
+                        System.out.println("Digite a data do Evento");
+                        
+                        String data = scan.nextLine();
+                        System.out.println("Digite o tipo do Evento");
+                        
 
-                    Evento novoEvento = new Evento(nomeEvento, descricao, data, tipo);
+                        String tipo = scan.nextLine();
 
-                    abrigoEscolhido.adicionarEvento(novoEvento);
+                        Evento novoEvento = new Evento(nomeEvento, descricao, data, tipo);
+
+                        abrigoEscolhido.adicionarEvento(novoEvento);
+
+                            break;
+
+                        case 2:
+                        abrigoEscolhido.listarEventos();
+                            break;
+                        default:
+                            break;
+                    }
+                break;
+
+                case 7:
+                    System.out.println("\nO que voce quer fazer?");
+                    System.out.println("1 - Criar uma conta");
+                    System.out.println("2 - Atualizar os Dados");
+                    System.out.println("3 - Excluir a conta");
+
+                    input = scan.nextInt();
+
+                    switch (input) {
+                        case 1:
+                            System.out.println("Digite seu nome:");
+                            scan.nextLine();
+                            String nomeUsuario = scan.nextLine();
+                            System.out.println("Digite o email");
+                            String emailUsuario = scan.nextLine();
+                            System.out.println("Digite a senha");
+                            String senhaUsuario = scan.nextLine();
+
+                            Usuario novoUsuario = new Usuario(nomeUsuario, emailUsuario, senhaUsuario);
+
+                            abrigoEscolhido.adicionarUsuario(novoUsuario);
+                            System.out.println("Usuario adicionado com sucesso!");
+                        break;
+
+                        case 2:
+                            System.out.println("Digite os dados atuais:");
+                            System.out.println("Digite seu nome:");
+                            scan.nextLine();
+                            String Nome = scan.nextLine();
+                            System.out.println("Digite o email");
+                            String Email = scan.nextLine();
+                            System.out.println("Digite a senha");
+                            String Senha = scan.nextLine();
+
+                            System.out.println("\nDigite os novos dados:");
+                            System.out.println("Digite seu nome:");
+                            String novoNome = scan.nextLine();
+                            System.out.println("Digite o email");
+                            String novoEmail = scan.nextLine();
+                            System.out.println("Digite a senha");
+                            String novaSenha = scan.nextLine();
+
+                            Usuario usuarioDesatualizado = new Usuario(Nome, Email, Senha);
+                            Usuario usuarioAtualizado = new Usuario(novoNome, novoEmail, novaSenha);
+
+                            abrigoEscolhido.atualizarContaUsuario(usuarioDesatualizado, usuarioAtualizado);
 
                         break;
 
-                    case 2:
-                    abrigoEscolhido.listarEventos();
+                        case 3:
+                            System.out.println("Digite os seus dados");
+                            System.out.println("Digite seu nome:");
+                            scan.nextLine();
+                            String nome = scan.nextLine();
+                            System.out.println("Digite o email");
+                            String email = scan.nextLine();
+                            System.out.println("Digite a senha");
+                            String senha = scan.nextLine();
+
+                            Usuario usuarioDelete = new Usuario(nome, email, senha);
+
+                            abrigoEscolhido.excluirContaUsuario(usuarioDelete);
+
                         break;
+
                     default:
                         break;
                 }
+                    
                 break;
 
                 default:
