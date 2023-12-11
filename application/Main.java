@@ -2,6 +2,7 @@ import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Scanner;
 
 import java.io.BufferedReader;
@@ -93,6 +94,10 @@ public class Main {
         "Feira especial com atividades para famílias. Adoção de animais e brindes para os novos donos.",
         "25 de outubro de 2024", "Feira de Adoção Especial");
 
+        String historia1 = "Polly encontrou um lar amoroso! Ela era tímida, mas com paciência e carinho, se tornou a alegria da família. Adotada em 10/02/2023.";
+        String historia2 = "Rex, agora Apollo, é um companheiro fiel! Ele veio cheio de energia e se tornou o melhor amigo de todas as horas. Adotado em 25/06/2023.";
+        String historia3 = "Luna, a doce gatinha, encontrou seu lar perfeito. Ela adora dormir na janela e brincar com seus novos amigos felinos. Adotada em 05/11/2023.";
+
         
         //RepositorioAbrigos repositorioAbrigos = new RepositorioAbrigos();
 
@@ -119,6 +124,8 @@ public class Main {
 
         abrigo1.adicionarEvento(eventoAbrigo1_1);
         abrigo1.adicionarEvento(eventoAbrigo1_2);
+
+        abrigo1.adicionarHistoriaSucesso(historia1);
         
 
         // ABRIGO 2
@@ -138,6 +145,8 @@ public class Main {
         abrigo2.adicionarEvento(eventoAbrigo2_1);
         abrigo2.adicionarEvento(eventoAbrigo2_2);
 
+        abrigo2.adicionarHistoriaSucesso(historia2);
+
 
         // ABRIGO 3
 
@@ -156,6 +165,8 @@ public class Main {
 
         abrigo3.adicionarEvento(eventoAbrigo3_1);
         abrigo3.adicionarEvento(eventoAbrigo3_2);
+
+        abrigo3.adicionarHistoriaSucesso(historia3);
 
 
         
@@ -206,6 +217,8 @@ public class Main {
             System.out.println("5 - Recursos Educacionais");
             System.out.println("6 - Listagem e Gerenciamento de Eventos");
             System.out.println("7 - Gerenciamento de Contas de usuário");
+            System.out.println("8 - Fazer uma doação");
+            System.out.println("9 - Historias de Sucesso e Depoimentos");
             System.out.printf("\n");
 
             input = scan.nextInt();
@@ -497,8 +510,48 @@ public class Main {
                     default:
                         break;
                 }
-                    
+
+                case 8:
+
+                System.out.println("Informe o valor que deseja doar");
+                double valor;
+
+                scan.useLocale(Locale.US); // Aceita . na entrada. Exemplo: 150.20
+
+                valor = scan.nextDouble();
+
+                abrigoEscolhido.receberDoacao(valor);
+                //System.out.println(abrigoEscolhido.getDoacoes());
+
                 break;
+
+                case 9:
+
+                System.out.println("O que desejar fazer");
+                System.out.println("1 - Adicionar um historia");
+                System.out.println("2 - Ver as historias");
+
+                input = scan.nextInt();
+
+                switch (input) {
+                    case 1:
+                        System.out.println("Conte sua historia");
+                        scan.nextLine();
+                        String historia = scan.nextLine();
+
+                        abrigoEscolhido.adicionarHistoriaSucesso(historia);
+                        break;
+
+                    case 2:
+                        abrigoEscolhido.listarHistoriasSucesso();
+                        break;
+                    default:
+                        break;
+                }
+
+                
+                break;
+                    
 
                 default:
                     break;

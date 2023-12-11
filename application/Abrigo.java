@@ -12,6 +12,8 @@ public class Abrigo {
     private List<Animal> animaisDisponiveis;
     private List<Usuario> usuariosRelacionados;
     private List<Evento> eventos;
+    private double totalDoacoes;
+    private List<String> historiasSucesso;
 
     /*------------------- BASICO ------------------------*/
     
@@ -25,6 +27,9 @@ public class Abrigo {
         this.animaisDisponiveis = new ArrayList<>();
         this.usuariosRelacionados = new ArrayList<>();
         this.eventos = new ArrayList<>();
+        this.totalDoacoes = 0.0;
+        this.historiasSucesso = new ArrayList<>();
+        
     }
 
     // Métodos getters
@@ -56,6 +61,21 @@ public class Abrigo {
         return this.usuariosRelacionados;
     } 
 
+    public double getDoacoes() {
+        return this.totalDoacoes;
+    }
+
+    public void listarHistoriasSucesso() {
+        if (historiasSucesso.isEmpty()) {
+            System.out.println("Nenhuma historia de sucesso disponivel no momento");
+        } else {
+            System.out.println("Histórias de sucesso e depoimentos");
+            for (String historia : historiasSucesso) {
+                System.out.println("\n- " + historia);
+            }
+        }
+    }
+
     // Métodos setters
 
     public void setNomeAbrigo(String nomeAbrigo) {
@@ -84,6 +104,16 @@ public class Abrigo {
 
     public void adicionarUsuario(Usuario usuario) {
         usuariosRelacionados.add(usuario);
+    }
+
+    public void receberDoacao(double valor) {
+        totalDoacoes += valor;
+        System.out.println("Doação recebida com sucesso! Obrigado pela contribuição.");
+    }
+
+    public void adicionarHistoriaSucesso(String historia) {
+        historiasSucesso.add(historia);
+
     }
 
     /*---------------------------------------------------*/
