@@ -219,6 +219,7 @@ public class Main {
             System.out.println("7 - Gerenciamento de Contas de usuário");
             System.out.println("8 - Fazer uma doação");
             System.out.println("9 - Historias de Sucesso e Depoimentos");
+            System.out.println("10 - Forum");
             System.out.printf("\n");
 
             input = scan.nextInt();
