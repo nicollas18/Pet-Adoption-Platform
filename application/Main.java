@@ -229,21 +229,21 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Opcao invalida.");
-                    break;
+                    System.out.println("\nOpcao invalida.");
+                    continue;
             }
             
             System.out.printf("\n");
             System.out.println("O que deseja fazer?");
-            System.out.println("1 - Gereciamento de perfis de animais");
-            System.out.println("2 - Processamento de Pedidos de Adocao");
-            System.out.println("3 - Opcoes de pesquisa e filtro");
-            System.out.println("4 - Perfil de organizações de abrigo e resgaste");
-            System.out.println("5 - Recursos Educacionais");
-            System.out.println("6 - Listagem e Gerenciamento de Eventos");
-            System.out.println("7 - Gerenciamento de Contas de usuário");
-            System.out.println("8 - Fazer uma doação");
-            System.out.println("9 - Historias de Sucesso e Depoimentos");
+            System.out.println(" 1 - Gereciamento de perfis de animais");
+            System.out.println(" 2 - Processamento de Pedidos de Adocao");
+            System.out.println(" 3 - Opcoes de pesquisa e filtro");
+            System.out.println(" 4 - Perfil de organizações de abrigo e resgaste");
+            System.out.println(" 5 - Recursos Educacionais");
+            System.out.println(" 6 - Listagem e Gerenciamento de Eventos");
+            System.out.println(" 7 - Gerenciamento de Contas de usuário");
+            System.out.println(" 8 - Fazer uma doação");
+            System.out.println(" 9 - Historias de Sucesso e Depoimentos");
             System.out.println("10 - Forum");
             System.out.printf("\n");
 
@@ -535,7 +535,9 @@ public class Main {
 
                     default:
                         break;
-                }
+                    }
+
+                break; // break do caso 7
 
                 case 8:
 
