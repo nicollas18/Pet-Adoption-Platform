@@ -107,7 +107,32 @@ public class Main {
 
         Abrigo abrigo3 = new Abrigo("Lar dos Peludos", "Endereço: Travessa das Ruas, 789", "lardospeludos@email.com", "(33) 8765-4321", " Segunda a Domingo, das 8h às 20h");
 
+        Forum forum = new Forum();
 
+        forum.criarTopico("Dicas para cuidar de animais");
+        forum.criarTopico("Compartilhe sua história de adoção");
+        forum.criarTopico("Dicas de Treinamento");
+        forum.criarTopico("Saúde e Bem-Estar");
+        forum.criarTopico("Comportamento Animal");
+
+        // Tópico 1
+        forum.adicionarMensagemNoTopico(0, "Carol", "Sempre ofereça água fresca para seus pets!");
+        forum.adicionarMensagemNoTopico(0, "Pedro", "É importante manter uma rotina de alimentação para os animais.");
+
+        // Tópico 2
+        forum.adicionarMensagemNoTopico(1, "Mariana", "Adotei um gato no abrigo e ele se tornou meu melhor amigo!");
+        forum.adicionarMensagemNoTopico(1, "Rafael", "Minha história de adoção mudou minha vida para sempre.");
+
+        // Tópico 3
+        forum.adicionarMensagemNoTopico(2, "Marcos", "Alguém tem dicas para treinar um filhote?");
+        forum.adicionarMensagemNoTopico(2, "Bruno", "Eu costumo usar reforço positivo para treinar meu cachorro. Funciona muito bem!");
+
+        // Tópico 4
+        forum.adicionarMensagemNoTopico(3, "Luiza", "Como manter a saúde do meu gato em dia?");
+        forum.adicionarMensagemNoTopico(3, "Daniel", "Consultas regulares ao veterinário são essenciais para a saúde dos pets.");
+
+        forum.adicionarMensagemNoTopico(4, "Ithalo", "Meu cachorro está agindo de maneira estranha, alguém já passou por isso?");
+        forum.adicionarMensagemNoTopico(4, "Leticia", "Pode ser estresse. Tente entender se algo mudou na rotina dele.");
 
         // ABRIGO 1
         abrigo1.adicionarUsuario(usuario1);
@@ -550,7 +575,24 @@ public class Main {
                         break;
                 }
 
-                
+                break;
+
+                case 10:
+
+                System.out.println();
+                forum.exivirTopicos();
+                //System.out.println();
+                /* forum.exibirMensagensDoTopico(0);
+                forum.exibirMensagensDoTopico(1);
+                forum.exibirMensagensDoTopico(2);
+                forum.exibirMensagensDoTopico(3);
+                forum.exibirMensagensDoTopico(4); */
+
+                System.out.println("O que desejar fazer?");
+                System.out.println("1 - Falar sobre um Topico");
+                System.out.println("2 - Adicionar um Topico");
+
+
                 break;
                     
 
