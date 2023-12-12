@@ -10,7 +10,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
 public class Main {
+
 
     private static void imprimirRecursoEducacional(String caminhoDoArquivo) {
         File arquivo = new File(caminhoDoArquivo);
@@ -26,11 +30,12 @@ public class Main {
 
             bufferedReader.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Erro ao configurar a codificação UTF-8: " + e.getMessage());
         }
     }
 
     public static void main(String[] args) {
+
 
         /*--------------------------- BASE DE DADOS------------------------- */
 
@@ -236,7 +241,7 @@ public class Main {
             System.out.printf("\n");
             System.out.println("O que deseja fazer?");
             System.out.println(" 1 - Gereciamento de perfis de animais");
-            System.out.println(" 2 - Processamento de Pedidos de Adocao");
+            System.out.println(" 2 - Processamento de Pedidos de Adoção");
             System.out.println(" 3 - Opcoes de pesquisa e filtro");
             System.out.println(" 4 - Perfil de organizações de abrigo e resgaste");
             System.out.println(" 5 - Recursos Educacionais");
@@ -627,7 +632,6 @@ public class Main {
 
                     forum.exibirMensagensDoTopico(topico - 1);
                 }
-
 
                 break;
                     
