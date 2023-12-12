@@ -583,6 +583,7 @@ public class Main {
 
                 System.out.println();
                 forum.exivirTopicos();
+                System.out.println();
                 //System.out.println();
                 /* forum.exibirMensagensDoTopico(0);
                 forum.exibirMensagensDoTopico(1);
@@ -593,6 +594,39 @@ public class Main {
                 System.out.println("O que desejar fazer?");
                 System.out.println("1 - Falar sobre um Topico");
                 System.out.println("2 - Adicionar um Topico");
+                System.out.println("3 - Ver mensagens de um topico");
+
+                input = scan.nextInt();
+
+                if (input == 1) {
+
+                    System.out.println("Sobre qual topico voce gostaria de falar?");
+                    int topico = scan.nextInt();
+                    scan.nextLine();
+                    System.out.println("Informe seu nome");
+                    String nome = scan.nextLine();
+                    System.out.println("Digite sua mensagem");
+                    String mensagem = scan.nextLine();
+
+                    forum.adicionarMensagemNoTopico(topico - 1, nome, mensagem);
+
+                }
+
+                else if (input == 2) {
+
+                    System.out.println("Informe o titulo do topico");
+                    String titulo = scan.nextLine();
+
+                    forum.criarTopico(titulo);
+                }
+
+                else if (input == 3) {
+
+                    System.out.println("Informe o topico que desejar ver as mensagens");
+                    int topico = scan.nextInt();
+
+                    forum.exibirMensagensDoTopico(topico - 1);
+                }
 
 
                 break;
