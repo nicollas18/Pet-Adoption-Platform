@@ -30,7 +30,7 @@ public class Main {
 
             bufferedReader.close();
         } catch (IOException e) {
-            System.err.println("Erro ao configurar a codifica√ß√£o UTF-8: " + e.getMessage());
+            System.err.println("Erro ao configurar a codificaÁ„o UTF-8: " + e.getMessage());
         }
     }
 
@@ -40,7 +40,7 @@ public class Main {
         /*--------------------------- BASE DE DADOS------------------------- */
 
         // USUARIOS:
-        Usuario usuario1 = new Usuario("Jo√£o", "joao@email.com", "senha123");
+        Usuario usuario1 = new Usuario("Jo„o", "joao@email.com", "senha123");
         Usuario usuario2 = new Usuario("Maria", "maria@email.com", "456senha");
         Usuario usuario3 = new Usuario("Carlos", "carlos@email.com", "789senha");
         Usuario usuario4 = new Usuario("Ana", "ana@email.com", "ana321senha");
@@ -58,85 +58,85 @@ public class Main {
 
         
         // ANIMAIS:
-        Animal animal1 = new Animal("Bolinha", 2, "Vira-lata", "Brincalh√£o");
-        Animal animal2 = new Animal("Frajola", 3, "Siam√™s", "Calmo");
-        Animal animal3 = new Animal("Rex", 5, "Labrador", "Amig√°vel");
+        Animal animal1 = new Animal("Bolinha", 2, "Vira-lata", "Brincalh„o");
+        Animal animal2 = new Animal("Frajola", 3, "SiamÍs", "Calmo");
+        Animal animal3 = new Animal("Rex", 5, "Labrador", "Amig·vel");
         Animal animal4 = new Animal("Luna", 1, "Persa", "Independente");
         Animal animal5 = new Animal("Thor", 4, "Golden Retriever", "Ativo");
         Animal animal6 = new Animal("Mia", 6, "Poodle", "Inteligente");
         Animal animal7 = new Animal("Simba", 2, "Bengal", "Curioso");
-        Animal animal8 = new Animal("Nina", 3, "Boxer", "Energ√©tico");
-        Animal animal9 = new Animal("Bob", 2, "Bulldog Franc√™s", "Afetuoso");
-        Animal animal10 = new Animal("Tobby", 4, "D√°lmata", "Protetor");
-        Animal animal11 = new Animal("Pel√∫cia", 2, "Chow Chow", "Alegre");
-        Animal animal12 = new Animal("Marley", 4, "Pastor Alem√£o", "Protetor");
+        Animal animal8 = new Animal("Nina", 3, "Boxer", "EnergÈtico");
+        Animal animal9 = new Animal("Bob", 2, "Bulldog FrancÍs", "Afetuoso");
+        Animal animal10 = new Animal("Tobby", 4, "D·lmata", "Protetor");
+        Animal animal11 = new Animal("Pel˙cia", 2, "Chow Chow", "Alegre");
+        Animal animal12 = new Animal("Marley", 4, "Pastor Alem„o", "Protetor");
         Animal animal13 = new Animal("Luna", 3, "Shih Tzu", "Carinhosa");
         Animal animal14 = new Animal("Boris", 5, "Rottweiler", "Leal");
         Animal animal15 = new Animal("Miau", 1, "Gato Persa", "Curioso");
 
-        Evento eventoAbrigo1_1 = new Evento("Campanha de Ado√ß√£o de Inverno",
-        "Campanha especial para ado√ß√£o de animais durante o inverno. Descontos especiais e kits de boas-vindas para os novos donos",
-        "15 de julho de 2024", "Campanha de Ado√ß√£o");
+        Evento eventoAbrigo1_1 = new Evento("Campanha de AdoÁ„o de Inverno",
+        "Campanha especial para adoÁ„o de animais durante o inverno. Descontos especiais e kits de boas-vindas para os novos donos",
+        "15 de julho de 2024", "Campanha de AdoÁ„o");
 
-        Evento eventoAbrigo1_2 = new Evento("Arrecada√ß√£o de Fundos",
-        "Evento para arrecadar fundos para a constru√ß√£o de novos canis. Rifa e bazares beneficentes ser√£o realizados.",
-        "30 de setembro de 2024", "Arrecada√ß√£o de Fundos");
+        Evento eventoAbrigo1_2 = new Evento("ArrecadaÁ„o de Fundos",
+        "Evento para arrecadar fundos para a construÁ„o de novos canis. Rifa e bazares beneficentes ser„o realizados.",
+        "30 de setembro de 2024", "ArrecadaÁ„o de Fundos");
 
         // Eventos para o Abrigo 2
-        Evento eventoAbrigo2_1 = new Evento("Feira de Ado√ß√£o",
-        "Feira com diversos animais dispon√≠veis para ado√ß√£o. Palestras e atividades para crian√ßas.",
-        "5 de agosto de 2024", "Feira de Ado√ß√£o");
+        Evento eventoAbrigo2_1 = new Evento("Feira de AdoÁ„o",
+        "Feira com diversos animais disponÌveis para adoÁ„o. Palestras e atividades para crianÁas.",
+        "5 de agosto de 2024", "Feira de AdoÁ„o");
 
-        Evento eventoAbrigo2_2 = new Evento("Campanha de Vacina√ß√£o",
-        "Vacina√ß√£o gratuita para c√£es e gatos. Todos s√£o bem-vindos!",
-        "20 de outubro de 2024", "Campanha de Sa√∫de");
+        Evento eventoAbrigo2_2 = new Evento("Campanha de VacinaÁ„o",
+        "VacinaÁ„o gratuita para c„es e gatos. Todos s„o bem-vindos!",
+        "20 de outubro de 2024", "Campanha de Sa˙de");
 
-        Evento eventoAbrigo3_1 = new Evento("Caminhada Solid√°ria",
-        "Caminhada com os animais dispon√≠veis para ado√ß√£o. Todos est√£o convidados a participar!",
+        Evento eventoAbrigo3_1 = new Evento("Caminhada Solid·ria",
+        "Caminhada com os animais disponÌveis para adoÁ„o. Todos est„o convidados a participar!",
         "12 de agosto de 2024", "Caminhada Beneficente");
 
-        Evento eventoAbrigo3_2 = new Evento("Feira de Ado√ß√£o Especial",
-        "Feira especial com atividades para fam√≠lias. Ado√ß√£o de animais e brindes para os novos donos.",
-        "25 de outubro de 2024", "Feira de Ado√ß√£o Especial");
+        Evento eventoAbrigo3_2 = new Evento("Feira de AdoÁ„o Especial",
+        "Feira especial com atividades para famÌlias. AdoÁ„o de animais e brindes para os novos donos.",
+        "25 de outubro de 2024", "Feira de AdoÁ„o Especial");
 
-        String historia1 = "Polly encontrou um lar amoroso! Ela era t√≠mida, mas com paci√™ncia e carinho, se tornou a alegria da fam√≠lia. Adotada em 10/02/2023.";
-        String historia2 = "Rex, agora Apollo, √© um companheiro fiel! Ele veio cheio de energia e se tornou o melhor amigo de todas as horas. Adotado em 25/06/2023.";
+        String historia1 = "Polly encontrou um lar amoroso! Ela era tÌmida, mas com paciÍncia e carinho, se tornou a alegria da famÌlia. Adotada em 10/02/2023.";
+        String historia2 = "Rex, agora Apollo, È um companheiro fiel! Ele veio cheio de energia e se tornou o melhor amigo de todas as horas. Adotado em 25/06/2023.";
         String historia3 = "Luna, a doce gatinha, encontrou seu lar perfeito. Ela adora dormir na janela e brincar com seus novos amigos felinos. Adotada em 05/11/2023.";
 
         
         //RepositorioAbrigos repositorioAbrigos = new RepositorioAbrigos();
 
-        Abrigo abrigo1 = new Abrigo("Abrigo Amigos dos Animais", "Rua das Flores, 123", "abrigoamigo@email.com", "(11) 1234-5678", " Segunda a S√°bado, das 10h √†s 17h");
+        Abrigo abrigo1 = new Abrigo("Abrigo Amigos dos Animais", "Rua das Flores, 123", "abrigoamigo@email.com", "(11) 1234-5678", " Segunda a S·bado, das 10h ‡s 17h");
 
-        Abrigo abrigo2 = new Abrigo("Abrigo Patinhas Felizes", "Avenida dos Anjos, 456", "patinhasfelizes@email.com", "(22) 9876-5432", "Segunda a S√°bado, das 10h √†s 17h");
+        Abrigo abrigo2 = new Abrigo("Abrigo Patinhas Felizes", "Avenida dos Anjos, 456", "patinhasfelizes@email.com", "(22) 9876-5432", "Segunda a S·bado, das 10h ‡s 17h");
 
-        Abrigo abrigo3 = new Abrigo("Lar dos Peludos", "Endere√ßo: Travessa das Ruas, 789", "lardospeludos@email.com", "(33) 8765-4321", " Segunda a Domingo, das 8h √†s 20h");
+        Abrigo abrigo3 = new Abrigo("Lar dos Peludos", "EndereÁo: Travessa das Ruas, 789", "lardospeludos@email.com", "(33) 8765-4321", " Segunda a Domingo, das 8h ‡s 20h");
 
         Forum forum = new Forum();
 
         forum.criarTopico("Dicas para cuidar de animais");
-        forum.criarTopico("Compartilhe sua hist√≥ria de ado√ß√£o");
+        forum.criarTopico("Compartilhe sua histÛria de adoÁ„o");
         forum.criarTopico("Dicas de Treinamento");
-        forum.criarTopico("Sa√∫de e Bem-Estar");
+        forum.criarTopico("Sa˙de e Bem-Estar");
         forum.criarTopico("Comportamento Animal");
 
-        // T√≥pico 1
-        forum.adicionarMensagemNoTopico(0, "Carol", "Sempre ofere√ßa √°gua fresca para seus pets!");
-        forum.adicionarMensagemNoTopico(0, "Pedro", "√â importante manter uma rotina de alimenta√ß√£o para os animais.");
+        // TÛpico 1
+        forum.adicionarMensagemNoTopico(0, "Carol", "Sempre ofereÁa ·gua fresca para seus pets!");
+        forum.adicionarMensagemNoTopico(0, "Pedro", "… importante manter uma rotina de alimentaÁ„o para os animais.");
 
-        // T√≥pico 2
+        // TÛpico 2
         forum.adicionarMensagemNoTopico(1, "Mariana", "Adotei um gato no abrigo e ele se tornou meu melhor amigo!");
-        forum.adicionarMensagemNoTopico(1, "Rafael", "Minha hist√≥ria de ado√ß√£o mudou minha vida para sempre.");
+        forum.adicionarMensagemNoTopico(1, "Rafael", "Minha histÛria de adoÁ„o mudou minha vida para sempre.");
 
-        // T√≥pico 3
-        forum.adicionarMensagemNoTopico(2, "Marcos", "Algu√©m tem dicas para treinar um filhote?");
-        forum.adicionarMensagemNoTopico(2, "Bruno", "Eu costumo usar refor√ßo positivo para treinar meu cachorro. Funciona muito bem!");
+        // TÛpico 3
+        forum.adicionarMensagemNoTopico(2, "Marcos", "AlguÈm tem dicas para treinar um filhote?");
+        forum.adicionarMensagemNoTopico(2, "Bruno", "Eu costumo usar reforÁo positivo para treinar meu cachorro. Funciona muito bem!");
 
-        // T√≥pico 4
-        forum.adicionarMensagemNoTopico(3, "Luiza", "Como manter a sa√∫de do meu gato em dia?");
-        forum.adicionarMensagemNoTopico(3, "Daniel", "Consultas regulares ao veterin√°rio s√£o essenciais para a sa√∫de dos pets.");
+        // TÛpico 4
+        forum.adicionarMensagemNoTopico(3, "Luiza", "Como manter a sa˙de do meu gato em dia?");
+        forum.adicionarMensagemNoTopico(3, "Daniel", "Consultas regulares ao veterin·rio s„o essenciais para a sa˙de dos pets.");
 
-        forum.adicionarMensagemNoTopico(4, "Ithalo", "Meu cachorro est√° agindo de maneira estranha, algu√©m j√° passou por isso?");
+        forum.adicionarMensagemNoTopico(4, "Ithalo", "Meu cachorro est· agindo de maneira estranha, alguÈm j· passou por isso?");
         forum.adicionarMensagemNoTopico(4, "Leticia", "Pode ser estresse. Tente entender se algo mudou na rotina dele.");
 
         // ABRIGO 1
@@ -241,13 +241,13 @@ public class Main {
             System.out.printf("\n");
             System.out.println("O que deseja fazer?");
             System.out.println(" 1 - Gereciamento de perfis de animais");
-            System.out.println(" 2 - Processamento de Pedidos de Ado√ß√£o");
+            System.out.println(" 2 - Processamento de Pedidos de AdoÁ„o");
             System.out.println(" 3 - Opcoes de pesquisa e filtro");
-            System.out.println(" 4 - Perfil de organiza√ß√µes de abrigo e resgaste");
+            System.out.println(" 4 - Perfil de organizaÁıes de abrigo e resgaste");
             System.out.println(" 5 - Recursos Educacionais");
             System.out.println(" 6 - Listagem e Gerenciamento de Eventos");
-            System.out.println(" 7 - Gerenciamento de Contas de usu√°rio");
-            System.out.println(" 8 - Fazer uma doa√ß√£o");
+            System.out.println(" 7 - Gerenciamento de Contas de usu·rio");
+            System.out.println(" 8 - Fazer uma doaÁ„o");
             System.out.println(" 9 - Historias de Sucesso e Depoimentos");
             System.out.println("10 - Forum");
             System.out.printf("\n");
@@ -267,7 +267,7 @@ public class Main {
             
                 switch (opcaoAnimal) {
                     case 1:
-                        // Listar animais dispon√≠veis
+                        // Listar animais disponÌveis
                         abrigoEscolhido.imprimirAnimaisDisponiveis();
                         break;
 
@@ -278,7 +278,7 @@ public class Main {
                         String nomeAnimal = scan.nextLine();
                         System.out.println("Digite a idade do animal:");
                         int idadeAnimal = scan.nextInt();
-                        System.out.println("Digite a ra√ßa do animal:");
+                        System.out.println("Digite a raÁa do animal:");
                         scan.nextLine(); // Limpar o buffer do scanner
                         String racaAnimal = scan.nextLine();
                         System.out.println("Digite a personalidade do animal:");
@@ -290,7 +290,7 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("Op√ß√£o inv√°lida.");
+                        System.out.println("OpÁ„o inv·lida.");
                         break;
                 }
                 break; // break do caso 1 mais externo
@@ -301,29 +301,29 @@ public class Main {
                 System.out.println("Selecione o numero do animal desejado para adocao:");
                 int numeroAnimal = scan.nextInt();
                 
-                // Verificar se o n√∫mero do animal √© v√°lido
+                // Verificar se o n˙mero do animal È v·lido
                 if (numeroAnimal >= 1 && numeroAnimal <= abrigoEscolhido.getAnimaisDisponiveis().size()) {
                     Animal animalSelecionado = abrigoEscolhido.getAnimaisDisponiveis().get(numeroAnimal - 1);
                     
-                    // Simular o envio de pedido de ado√ß√£o por um usu√°rio
+                    // Simular o envio de pedido de adoÁ„o por um usu·rio
                     System.out.println("Digite seu nome de usuario para enviar o pedido:");
                     scan.nextLine(); // Limpar o buffer do scanner
                     String nomeUsuario = scan.nextLine();
                     
-                    // Verificar se o usu√°rio est√° relacionado ao abrigo
+                    // Verificar se o usu·rio est· relacionado ao abrigo
                     boolean usuarioExiste = abrigoEscolhido.getUsuariosRelacionados().stream().anyMatch(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario));
                     
                     if (usuarioExiste) {
                         Usuario usuarioPedido = abrigoEscolhido.getUsuariosRelacionados().stream().filter(usuario -> usuario.getNome().equalsIgnoreCase(nomeUsuario)).findFirst().orElse(null);
                         
-                        // Processamento do pedido de ado√ß√£o
+                        // Processamento do pedido de adoÁ„o
                         boolean pedidoAceito = abrigoEscolhido.solicitarAdocao(usuarioPedido, animalSelecionado);
                         
 
                         if (pedidoAceito) {
                             System.out.println("Pedido de adocao enviado com sucesso!");
                         } else {
-                            System.out.println("Desculpe, o pedido de adocao n√£o pode ser concluido.");
+                            System.out.println("Desculpe, o pedido de adocao n„o pode ser concluido.");
                         }
                     } else {
                         System.out.println("Usuario nao encontrado no abrigo.");
@@ -344,8 +344,8 @@ public class Main {
                 
                 switch (opcaoPesquisa) {
                     case 1:
-                        // Pesquisar por ra√ßa
-                        System.out.println("Digite a ra√ßa para pesquisa:");
+                        // Pesquisar por raÁa
+                        System.out.println("Digite a raÁa para pesquisa:");
                         scan.nextLine(); // Limpar o buffer do scanner
                         String racaPesquisa = scan.nextLine();
 
@@ -394,7 +394,7 @@ public class Main {
                         }
                         break;
                     default:
-                        System.out.println("Op√ß√£o inv√°lida.");
+                        System.out.println("OpÁ„o inv·lida.");
                         break;
                 }
                 break;
@@ -407,13 +407,13 @@ public class Main {
                 break;
 
                 case 5:
-                System.out.println("Recursos Educacionais Dispon√≠veis:");
-                System.out.println("1 - Cuidados B√°sicos com Animais de Estima√ß√£o");
-                System.out.println("2 - Guia de Ado√ß√£o Respons√°vel");
+                System.out.println("Recursos Educacionais DisponÌveis:");
+                System.out.println("1 - Cuidados B·sicos com Animais de EstimaÁ„o");
+                System.out.println("2 - Guia de AdoÁ„o Respons·vel");
                 System.out.println("3 - Comportamento Animal");
 
                 System.out.println();
-                System.out.println("Sobre qual voc√™ deseja ler?");
+                System.out.println("Sobre qual vocÍ deseja ler?");
 
                 int opcao = scan.nextInt();
                 String caminhoDoArquivo = "";
@@ -429,7 +429,7 @@ public class Main {
                         caminhoDoArquivo = "3 - Comportamento Animal.txt";
                         break;
                     default:
-                        System.out.println("Op√ß√£o Inv√°lida!");
+                        System.out.println("OpÁ„o Inv·lida!");
                         break;
                 }
 
