@@ -5,7 +5,7 @@ Pet Adotation Platform
 
 Plataforma de Adoção de Animais de Estimação: Um sistema com aulas para animais de estimação, abrigos e adotantes, facilitando a adoção de animais de estimação buscas, processos de adoção e gerenciamento de abrigos.
 
-Funcionalidades:
+- Funcionalidades:
 
 1 - Gerenciamento de perfis de animais de estimação: gerenciamento de perfis de animais de estimação disponíveis para adoção;
 
@@ -27,7 +27,7 @@ Funcionalidades:
 
 10 -Fórum Comunitário: Um fórum para adotantes e amantes de animais de estimação compartilharem experiências e conselhos.
 
-Execução:
+- Execução:
 
 Para executar o código basta compilar o arquivo Main.java e executá-lo.
 
