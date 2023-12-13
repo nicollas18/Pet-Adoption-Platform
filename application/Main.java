@@ -240,16 +240,16 @@ public class Main {
             
             System.out.printf("\n");
             System.out.println("O que deseja fazer?");
-            System.out.println(" 1 - Gereciamento de perfis de animais");
+            System.out.println(" 1 - Gereciamento de Perfis de Animais");
             System.out.println(" 2 - Processamento de Pedidos de Adoção");
-            System.out.println(" 3 - Opcoes de pesquisa e filtro");
-            System.out.println(" 4 - Perfil de organizações de abrigo e resgaste");
+            System.out.println(" 3 - Opcoes de Pesquisa e Filtro");
+            System.out.println(" 4 - Perfil de Organizações de Abrigo e Resgaste");
             System.out.println(" 5 - Recursos Educacionais");
             System.out.println(" 6 - Listagem e Gerenciamento de Eventos");
-            System.out.println(" 7 - Gerenciamento de Contas de usuário");
-            System.out.println(" 8 - Fazer uma doação");
-            System.out.println(" 9 - Historias de Sucesso e Depoimentos");
-            System.out.println("10 - Forum");
+            System.out.println(" 7 - Gerenciamento de Contas de Usuário");
+            System.out.println(" 8 - Fazer uma Doação");
+            System.out.println(" 9 - Histórias de Sucesso e Depoimentos");
+            System.out.println("10 - Fórum");
             System.out.printf("\n");
 
             input = scan.nextInt();
@@ -258,9 +258,9 @@ public class Main {
 
                 // CASO 1 MAIS EXTERNO
                 case 1:
-                System.out.println("Informe a operacao desejada");
-                System.out.println("1 - Listar animais disponiveis");
-                System.out.println("2 - Adicionar novo animal");
+                System.out.println("Informe a Operação Desejada");
+                System.out.println("1 - Listar Animais DisponÍveis");
+                System.out.println("2 - Adicionar Novo Animal");
                 System.out.printf("\n");
                 int opcaoAnimal = scan.nextInt();
             
@@ -290,7 +290,7 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("Opção inválida.");
+                        System.out.println("Opção Inválida.");
                         break;
                 }
                 break; // break do caso 1 mais externo
@@ -298,7 +298,7 @@ public class Main {
                 // CASO 2 MAIS EXTERNO
                 case 2:
                 abrigoEscolhido.imprimirAnimaisDisponiveis();
-                System.out.println("Selecione o numero do animal desejado para adocao:");
+                System.out.println("Selecione o numero do animal desejado para adoção:");
                 int numeroAnimal = scan.nextInt();
                 
                 // Verificar se o número do animal é válido
@@ -306,7 +306,7 @@ public class Main {
                     Animal animalSelecionado = abrigoEscolhido.getAnimaisDisponiveis().get(numeroAnimal - 1);
                     
                     // Simular o envio de pedido de adoção por um usuário
-                    System.out.println("Digite seu nome de usuario para enviar o pedido:");
+                    System.out.println("Digite seu nome de usuário para enviar o pedido:");
                     scan.nextLine(); // Limpar o buffer do scanner
                     String nomeUsuario = scan.nextLine();
                     
@@ -321,24 +321,24 @@ public class Main {
                         
 
                         if (pedidoAceito) {
-                            System.out.println("Pedido de adocao enviado com sucesso!");
+                            System.out.println("Pedido de adoção enviado com sucesso!");
                         } else {
-                            System.out.println("Desculpe, o pedido de adocao não pode ser concluido.");
+                            System.out.println("Desculpe, o pedido de adoção não pode ser concluído.");
                         }
                     } else {
-                        System.out.println("Usuario nao encontrado no abrigo.");
+                        System.out.println("Usuário não encontrado no abrigo.");
                     }
                 } else {
-                    System.out.println("Numero de animal invalido.");
+                    System.out.println("Número de animal inválido.");
                 }
                 break;
 
                 // CASO 3 MAIS EXTERNO
                 case 3:
-                System.out.println("Escolha uma opcao de pesquisa:");
-                System.out.println("1 - Pesquisar por raca");
-                System.out.println("2 - Pesquisar por idade");
-                System.out.println("3 - Pesquisar por personalidade");
+                System.out.println("Escolha uma opçãoo de pesquisa:");
+                System.out.println("1 - Pesquisar por Raça");
+                System.out.println("2 - Pesquisar por Idade");
+                System.out.println("3 - Pesquisar por Personalidade");
                 
                 int opcaoPesquisa = scan.nextInt();
                 
@@ -354,12 +354,12 @@ public class Main {
                         List<Animal> animaisPorRaca = abrigoEscolhido.buscarAnimaisPorCriterio("raca", racaPesquisa);
 
                         if (!animaisPorRaca.isEmpty()) {
-                            System.out.println("Animais encontrados com a raca '" + racaPesquisa + "':");
+                            System.out.println("Animais encontrados com a raça '" + racaPesquisa + "':");
                             for (Animal animal : animaisPorRaca) {
                                 System.out.println(animal);
                             }
                         } else {
-                            System.out.println("Nenhum animal encontrado com a raca '" + racaPesquisa + "'.");
+                            System.out.println("Nenhum animal encontrado com a raça '" + racaPesquisa + "'.");
                         }
                         break;
                     case 2:
@@ -394,7 +394,7 @@ public class Main {
                         }
                         break;
                     default:
-                        System.out.println("Opção inválida.");
+                        System.out.println("Opção Inválida.");
                         break;
                 }
                 break;
@@ -475,9 +475,9 @@ public class Main {
 
                 case 7:
                     System.out.println("\nO que voce quer fazer?");
-                    System.out.println("1 - Criar uma conta");
+                    System.out.println("1 - Criar uma Conta");
                     System.out.println("2 - Atualizar os Dados");
-                    System.out.println("3 - Excluir a conta");
+                    System.out.println("3 - Excluir a Conta");
 
                     input = scan.nextInt();
 
@@ -561,14 +561,14 @@ public class Main {
                 case 9:
 
                 System.out.println("O que desejar fazer");
-                System.out.println("1 - Adicionar um historia");
-                System.out.println("2 - Ver as historias");
+                System.out.println("1 - Adicionar um História");
+                System.out.println("2 - Ver as Histórias");
 
                 input = scan.nextInt();
 
                 switch (input) {
                     case 1:
-                        System.out.println("Conte sua historia");
+                        System.out.println("Conte sua história");
                         scan.nextLine();
                         String historia = scan.nextLine();
 
@@ -597,15 +597,15 @@ public class Main {
                 forum.exibirMensagensDoTopico(4); */
 
                 System.out.println("O que desejar fazer?");
-                System.out.println("1 - Falar sobre um Topico");
-                System.out.println("2 - Adicionar um Topico");
-                System.out.println("3 - Ver mensagens de um topico");
+                System.out.println("1 - Falar sobre um Tópico");
+                System.out.println("2 - Adicionar um Tópico");
+                System.out.println("3 - Ver Mensagens de um Tópico");
 
                 input = scan.nextInt();
 
                 if (input == 1) {
 
-                    System.out.println("Sobre qual topico voce gostaria de falar?");
+                    System.out.println("Sobre qual tópico você gostaria de falar?");
                     int topico = scan.nextInt();
                     scan.nextLine();
                     System.out.println("Informe seu nome");
@@ -619,7 +619,7 @@ public class Main {
 
                 else if (input == 2) {
 
-                    System.out.println("Informe o titulo do topico");
+                    System.out.println("Informe o titulo do tópico");
                     String titulo = scan.nextLine();
 
                     forum.criarTopico(titulo);
@@ -627,7 +627,7 @@ public class Main {
 
                 else if (input == 3) {
 
-                    System.out.println("Informe o topico que desejar ver as mensagens");
+                    System.out.println("Informe o tópico que desejar ver as mensagens");
                     int topico = scan.nextInt();
 
                     forum.exibirMensagensDoTopico(topico - 1);
