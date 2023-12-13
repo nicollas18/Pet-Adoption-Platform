@@ -31,3 +31,7 @@ Plataforma de Adoção de Animais de Estimação: Um sistema com aulas para anim
 
 Para executar o código basta compilar o arquivo Main.java e executá-lo.
 
+- Observação:
+
+Casa estaja com problemas com os caracteres especiais (à, â, ç) vá nas configurações do IDE e mudar para o padrão "UTF-8" ou "Westenr (Windows 1252)"
+
