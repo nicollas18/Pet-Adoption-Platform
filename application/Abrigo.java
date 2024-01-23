@@ -125,10 +125,12 @@ public class Abrigo {
 
     // Método para imprimir animais disponíveis
     public void imprimirAnimaisDisponiveis() {
-        System.out.println("Animais Disponiveis no Abrigo " + nomeAbrigo + ":\n");
+        int i = 1;
+        System.out.println("Animais Disponiveis no " + nomeAbrigo + ":\n");
         for (Animal animal : animaisDisponiveis) {
-            System.out.printf("Nome: %-10s | Idade: %-3d | Raca: %-20s | Personalidade: %-15s\n",
+            System.out.printf(i + " - Nome: %-10s | Idade: %-3d | Raca: %-20s | Personalidade: %-15s\n",
                     animal.getNome(), animal.getIdade(), animal.getRaca(), animal.getPersonalidade());
+                    i++;
         }
         System.out.printf("\n");
     }

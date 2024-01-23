@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -36,7 +35,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         InicializadorDados.inicializadorBaseDados();
 
         List<Abrigo> abrigos = InicializadorDados.getAbrigos();
@@ -66,13 +64,7 @@ public class Main {
             switch (input) {
 
                 case 1: 
-                    abrigoEscolhido = abrigos.get(input - 1);
-                    break;
-                
                 case 2:
-                    abrigoEscolhido = abrigos.get(input - 1);
-                    break;
-
                 case 3:
                     abrigoEscolhido = abrigos.get(input - 1);
                     break;
@@ -97,8 +89,20 @@ public class Main {
             System.out.printf("\n");
 
             input = scan.nextInt();
-    
+
             switch (input) {
+
+                case 1:
+                    new Funcionalidade1().executar(abrigoEscolhido);
+                    break;
+
+                case 2:
+                    new Funcionalidade2().executar(abrigoEscolhido);
+                    break;
+
+            }
+    
+            /*switch (input) {
 
                 // CASO 1 MAIS EXTERNO
                 case 1:
@@ -439,7 +443,7 @@ public class Main {
                 forum.exibirMensagensDoTopico(1);
                 forum.exibirMensagensDoTopico(2);
                 forum.exibirMensagensDoTopico(3);
-                forum.exibirMensagensDoTopico(4); */
+                forum.exibirMensagensDoTopico(4); 
 
                 System.out.println("O que desejar fazer?");
                 System.out.println("1 - Falar sobre um T�pico");
@@ -483,7 +487,7 @@ public class Main {
 
                 default:
                     break;
-            }
+            } */
         }
     }
 }
