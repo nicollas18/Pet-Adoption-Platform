@@ -40,7 +40,7 @@ public class Main {
         /*--------------------------- BASE DE DADOS------------------------- */
 
         // USUARIOS:
-        Usuario usuario1 = new Usuario("Jo�o", "joao@email.com", "senha123");
+        Usuario usuario1 = new Usuario("João", "joao@email.com", "senha123");
         Usuario usuario2 = new Usuario("Maria", "maria@email.com", "456senha");
         Usuario usuario3 = new Usuario("Carlos", "carlos@email.com", "789senha");
         Usuario usuario4 = new Usuario("Ana", "ana@email.com", "ana321senha");
