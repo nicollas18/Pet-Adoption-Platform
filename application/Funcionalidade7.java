@@ -27,7 +27,7 @@ public class Funcionalidade7 {
                 Usuario novoUsuario = new Usuario(nomeUsuario, emailUsuario, senhaUsuario);
 
                 abrigo.adicionarUsuario(novoUsuario);
-                System.out.println("Usuario adicionado com sucesso!");
+                System.out.println("Usuário adicionado com sucesso!");
             break;
 
             case 2:

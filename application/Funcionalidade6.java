@@ -18,7 +18,7 @@ public class Funcionalidade6 {
                 System.out.println("Digite o nome do Evento:");
                 scan.nextLine();
                 String nomeEvento = scan.nextLine();
-                System.out.println("Digite a descricao do Evento");
+                System.out.println("Digite a descrição do Evento");
             
                 String descricao = scan.nextLine();
                 System.out.println("Digite a data do Evento");

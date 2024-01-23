@@ -6,9 +6,9 @@ public class Funcionalidade5 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Recursos Educacionais Dispon�veis:");
-        System.out.println("1 - Cuidados B�sicos com Animais de Estima��o");
-        System.out.println("2 - Guia de Ado��o Respons�vel");
+        System.out.println("Recursos Educacionais Disponíveis:");
+        System.out.println("1 - Cuidados Básicos com Animais de Estimação");
+        System.out.println("2 - Guia de Adoção Responsável");
         System.out.println("3 - Comportamento Animal");
 
         System.out.println();
@@ -28,7 +28,7 @@ public class Funcionalidade5 {
                 caminhoDoArquivo = "3 - Comportamento Animal.txt";
                 break;
             default:
-                System.out.println("Op��o Inv�lida!");
+                System.out.println("Opção Inválida!");
                 break;
         }
 

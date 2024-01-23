@@ -17,15 +17,15 @@ public class Funcionalidade10 {
         forum.exibirMensagensDoTopico(4); 
 
         System.out.println("O que desejar fazer?");
-        System.out.println("1 - Falar sobre um T�pico");
-        System.out.println("2 - Adicionar um T�pico");
-        System.out.println("3 - Ver Mensagens de um T�pico");
+        System.out.println("1 - Falar sobre um Tópico");
+        System.out.println("2 - Adicionar um Tópico");
+        System.out.println("3 - Ver Mensagens de um Tópico");
 
         int input = scan.nextInt();
 
         if (input == 1) {
 
-            System.out.println("Sobre qual t�pico voc� gostaria de falar?");
+            System.out.println("Sobre qual tópico você gostaria de falar?");
             int topico = scan.nextInt();
             scan.nextLine();
             System.out.println("Informe seu nome");
@@ -39,7 +39,7 @@ public class Funcionalidade10 {
 
         else if (input == 2) {
 
-            System.out.println("Informe o titulo do t�pico");
+            System.out.println("Informe o titulo do tópico");
             String titulo = scan.nextLine();
 
             forum.criarTopico(titulo);
@@ -47,7 +47,7 @@ public class Funcionalidade10 {
 
         else if (input == 3) {
 
-            System.out.println("Informe o t�pico que desejar ver as mensagens");
+            System.out.println("Informe o tópico que desejar ver as mensagens");
             int topico = scan.nextInt();
 
             forum.exibirMensagensDoTopico(topico - 1);

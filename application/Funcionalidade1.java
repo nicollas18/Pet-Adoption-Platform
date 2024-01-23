@@ -7,7 +7,7 @@ public class Funcionalidade1 {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Informe a Operação Desejada");
-        System.out.println("1 - Listar Animais Dispon�veis");
+        System.out.println("1 - Listar Animais Disponíveis");
         System.out.println("2 - Adicionar Novo Animal");
         System.out.printf("\n");
         int opcaoAnimal = scan.nextInt();
@@ -38,7 +38,7 @@ public class Funcionalidade1 {
                 break;
 
             default:
-                System.out.println("Op��o Inv�lida.");
+                System.out.println("Opção Inválida.");
                 break;
         }
         

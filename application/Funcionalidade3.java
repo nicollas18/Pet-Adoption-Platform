@@ -17,7 +17,7 @@ public class Funcionalidade3 {
         switch (opcaoPesquisa) {
             case 1:
                 // Pesquisar por ra�a
-                System.out.println("Digite a ra�a para pesquisa:");
+                System.out.println("Digite a raça para pesquisa:");
                 scan.nextLine(); // Limpar o buffer do scanner
                 String racaPesquisa = scan.nextLine();
 
@@ -26,12 +26,12 @@ public class Funcionalidade3 {
                 List<Animal> animaisPorRaca = abrigo.buscarAnimaisPorCriterio("raca", racaPesquisa);
 
                 if (!animaisPorRaca.isEmpty()) {
-                    System.out.println("Animais encontrados com a ra�a '" + racaPesquisa + "':");
+                    System.out.println("Animais encontrados com a raça '" + racaPesquisa + "':");
                     for (Animal animal : animaisPorRaca) {
                         System.out.println(animal);
                     }
                 } else {
-                    System.out.println("Nenhum animal encontrado com a ra�a '" + racaPesquisa + "'.");
+                    System.out.println("Nenhum animal encontrado com a raça '" + racaPesquisa + "'.");
                 }
                 break;
             case 2:

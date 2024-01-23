@@ -7,14 +7,14 @@ public class Funcionalidade9 {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("O que desejar fazer");
-        System.out.println("1 - Adicionar um Hist�ria");
-        System.out.println("2 - Ver as Hist�rias");
+        System.out.println("1 - Adicionar um História");
+        System.out.println("2 - Ver as Histórias");
 
         int input = scan.nextInt();
 
         switch (input) {
             case 1:
-                System.out.println("Conte sua hist�ria");
+                System.out.println("Conte sua história");
                 scan.nextLine();
                 String historia = scan.nextLine();
 
