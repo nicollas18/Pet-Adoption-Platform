@@ -1,3 +1,5 @@
+
+
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -8,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+
 
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
@@ -29,7 +32,7 @@ public class Main {
 
             bufferedReader.close();
         } catch (IOException e) {
-            System.err.println("Erro ao configurar a codificação UTF-8: " + e.getMessage());
+            System.err.println("Erro ao configurar a codificaï¿½ï¿½o UTF-8: " + e.getMessage());
         }
     }
 
@@ -70,22 +73,22 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("\nOpcão Inválida.");
+                    System.out.println("\nOpcï¿½o Invï¿½lida.");
                     continue;
             }
             
             System.out.printf("\n");
             System.out.println("O que deseja fazer?");
             System.out.println(" 1 - Gereciamento de Perfis de Animais");
-            System.out.println(" 2 - Processamento de Pedidos de Adoção");
-            System.out.println(" 3 - Opções de Pesquisa e Filtro");
-            System.out.println(" 4 - Perfil de Organizações de Abrigo e Resgaste");
+            System.out.println(" 2 - Processamento de Pedidos de Adoï¿½ï¿½o");
+            System.out.println(" 3 - Opï¿½ï¿½es de Pesquisa e Filtro");
+            System.out.println(" 4 - Perfil de Organizaï¿½ï¿½es de Abrigo e Resgaste");
             System.out.println(" 5 - Recursos Educacionais");
             System.out.println(" 6 - Listagem e Gerenciamento de Eventos");
-            System.out.println(" 7 - Gerenciamento de Contas de Usuário");
-            System.out.println(" 8 - Fazer uma Doação");
-            System.out.println(" 9 - Histórias de Sucesso e Depoimentos");
-            System.out.println("10 - Fórum");
+            System.out.println(" 7 - Gerenciamento de Contas de Usuï¿½rio");
+            System.out.println(" 8 - Fazer uma Doaï¿½ï¿½o");
+            System.out.println(" 9 - Histï¿½rias de Sucesso e Depoimentos");
+            System.out.println("10 - Fï¿½rum");
             System.out.printf("\n");
 
             input = scan.nextInt();
