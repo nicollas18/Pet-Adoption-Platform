@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 public class Funcionalidade1 {
     
-    public void executar(Abrigo abrigo) {
+    public int executar(Abrigo abrigo) {
 
+        int retorno = 0;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Informe a Operação Desejada");
         System.out.println("1 - Listar Animais Disponíveis");
         System.out.println("2 - Adicionar Novo Animal");
+        System.out.println("3 - Retornar ao Menu");
         System.out.printf("\n");
         int opcaoAnimal = scan.nextInt();
     
@@ -37,10 +39,15 @@ public class Funcionalidade1 {
                 System.out.println("Novo animal adicionado com sucesso!");
                 break;
 
+            case 3:
+                retorno = 3;
+                return retorno;
+
             default:
                 System.out.println("Opção Inválida.");
                 break;
         }
-        
+
+        return retorno; 
     }
 }

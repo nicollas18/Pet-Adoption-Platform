@@ -3,14 +3,18 @@ import java.util.Scanner;
 
 public class Funcionalidade3 {
     
-    public void executar(Abrigo abrigo) {
+    public int executar(Abrigo abrigo) {
 
+        int retorno = 0;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Escolha uma opção de pesquisa:");
         System.out.println("1 - Pesquisar por Ra�a");
         System.out.println("2 - Pesquisar por Idade");
         System.out.println("3 - Pesquisar por Personalidade");
+        System.out.println("4 - Voltar para o Menu");
+        System.out.printf("\n");
+        
         
         int opcaoPesquisa = scan.nextInt();
         
@@ -65,10 +69,17 @@ public class Funcionalidade3 {
                     System.out.println("Nenhum animal encontrado com a personalidade '" + personalidadePesquisa + "'.");
                 }
                 break;
+
+            case 4:
+                retorno = 4;
+                return retorno;
+
             default:
                 System.out.println("Opção Inválida.");
                 break;
         }
+
+        return retorno;
         
     }
 }

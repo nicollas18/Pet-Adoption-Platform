@@ -71,7 +71,7 @@ public class Abrigo {
         } else {
             System.out.println("Histórias de sucesso e depoimentos");
             for (String historia : historiasSucesso) {
-                System.out.println("\n- " + historia);
+                System.out.println("\n- " + historia + "\n");
             }
         }
     }

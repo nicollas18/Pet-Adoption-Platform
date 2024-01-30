@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class Funcionalidade7 {
     
-    public void executar(Abrigo abrigo) {
+    public int executar(Abrigo abrigo) {
 
+        int retorno = 0;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("\nO que voce quer fazer?");
         System.out.println("1 - Criar uma Conta");
         System.out.println("2 - Atualizar os Dados");
         System.out.println("3 - Excluir a Conta");
+        System.out.println("4 - Voltar para o Menu");
 
         int input = scan.nextInt();
 
@@ -70,8 +72,14 @@ public class Funcionalidade7 {
                 abrigo.excluirContaUsuario(usuarioDelete);
                 break;
 
+            case 4:
+                retorno = 4;
+                return retorno;
+
             default:
                 break;
         }
+
+        return retorno;
     }
 }

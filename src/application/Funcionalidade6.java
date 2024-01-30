@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 public class Funcionalidade6 {
     
-    public void executar(Abrigo abrigo) {
+    public int executar(Abrigo abrigo) {
 
+        int retorno = 0;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("\nO que voce quer?");
         System.out.println("1 - Adicionar um Evento");
         System.out.println("2 - Lista dos Eventos");
+        System.out.println("3 - Voltar para o Menu");
 
         int input = scan.nextInt();
 
@@ -37,9 +39,15 @@ public class Funcionalidade6 {
             case 2:
                 abrigo.listarEventos();
                 break;
+
+            case 3:
+                retorno = 3;
+                return retorno;
                 
             default:
                 break;
         }
+
+        return retorno;
     }
 }

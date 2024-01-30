@@ -18,6 +18,7 @@ public class Forum {
             System.out.println("Topico #" + (i+1) + ": " + topicos.get(i).getTitulo());
             
         }
+        System.out.println();
     }
 
     public void adicionarMensagemNoTopico(int indiceTopico, String autor, String conteudo) {
