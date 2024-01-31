@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+
 public class menu {
 
     private static void imprimirRecursoEducacional(String caminhoDoArquivo) {
