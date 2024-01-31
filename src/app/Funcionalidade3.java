@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Funcionalidade3 {
     
     public int executar(Abrigo abrigo) {

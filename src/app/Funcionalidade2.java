@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Funcionalidade2 {
     
     public void executar(Abrigo abrigo) {

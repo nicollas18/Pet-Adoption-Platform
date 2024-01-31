@@ -1,5 +1,4 @@
 import java.util.List;
-
 public class Funcionalidade4 {
     
     public void executar(List<Abrigo> abrigos) {
