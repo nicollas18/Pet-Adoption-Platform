@@ -20,7 +20,7 @@ public class menu {
 
             bufferedReader.close();
         } catch (IOException e) {
-            System.err.println("Erro ao configurar a codifica��o UTF-8: " + e.getMessage());
+            System.err.println("Erro ao configurar a codificação UTF-8: " + e.getMessage());
         }
     }
     
